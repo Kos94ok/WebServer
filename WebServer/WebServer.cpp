@@ -1,26 +1,7 @@
+
 #include "stdafx.h"
 
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-
-#include <windows.h>
-#include <winsock2.h>
-#include <ws2tcpip.h>
-#include <iphlpapi.h>
-#include <stdio.h>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-
-#define _CRT_SECURE_NO_WARNINGS
-
-using namespace std;
-
-string mainpath = "F:/Workspace/Website/ChristmasTime";
-
-#pragma comment(lib, "Ws2_32.lib")
+string mainpath = "../../ChristmasTime/";
 
 string getTimeStr()
 {
@@ -39,48 +20,10 @@ string getTimeStr()
 	return val;
 }
 
-string parseEJB(string script)
-{
-	string retval = "", parse;
-	string cmd = script.substr(0, script.find(":"));
-	string args = script.substr(script.find(":") + 2);
-	if (cmd == "from")
-	{
-		string filename = args.substr(0, args.find(" "));
-		string entry = args.substr(args.find(" ") + 1);
-		ifstream file(mainpath + filename);
-		if (file.good())
-		{
-			while (!file.eof())
-			{
-				char buf[256];
-				file.getline(buf, 256);
-				parse = buf;
-				if (parse.substr(0, parse.find(" = ")) == entry) {
-					retval = parse.substr(parse.find(" = ") + 3);
-					break;
-				}
-			}
-		}
-		file.close();
-	}
-	else if (cmd == "flush")
-	{
-		string filename = args.substr(0, args.find(" "));
-		ifstream file(mainpath + filename);
-		if (file.good())
-		{
-			ostringstream oss;
-			oss << file.rdbuf();
-			retval = oss.str();
-		}
-		file.close();
-	}
-	return retval;
-}
-
 int main()
 {
+	cout << ejb_from("/res/db/recipes/category.ini", "id0") << endl;
+
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
 
@@ -115,7 +58,7 @@ int main()
 		char recbuf[2048] = "";
 		val = recv(client, recbuf, 2048, 0);
 		if (val > 0) {
-			cout << "\nNew message:" << "\n========================================\n";
+			//cout << "\nNew message:" << "\n========================================\n";
 			//cout << recbuf << endl;
 			//cout << "\n========================================\n";
 		}
@@ -124,49 +67,98 @@ int main()
 		// GET Request
 		if (req.substr(0, 3) == "GET")
 		{
-			string url = req.substr(4, req.find(" ", 4) - 4);
+			string url = req.substr(4, req.find(" ", 4) - 4), args;
 			if (url == "/") { url = "/index.html"; }
-			cout << getTimeStr() + "Received GET for: " << url << endl;
+			cout << getTimeStr() + "Received GET for: " << url << "\n";
 
-			string strbuf, buf;
-			ifstream file;
-			file.open(mainpath + url, ios::in | ios::binary);
-			if (file.good())
-			{
-				// Reading the file
-				cout << getTimeStr() + "File found. Creating a response." << endl;
-				strbuf.clear();
-				ostringstream oss;
-				oss << file.rdbuf();
-				strbuf = oss.str();
-				// Parsing EJB script
-				if (url.length() > 5 && url.substr(url.length() - 5, 5) == ".html")
-				{
-					for (int i = 0; i < (int)strbuf.length() - 5; i++) {
-						if (strbuf.substr(i, 5) == "<ejb>") {
-							cout << getTimeStr() + "EJB script detected. Parsing." << endl;
-							string scr = strbuf.substr(i + 5, strbuf.find("</ejb>") - i - 5);
+			if (url.find("?") != string::npos) {
+				args = url.substr(url.find("?") + 1);
+				url = url.substr(0, url.find("?"));
 
-							strbuf.replace(i, strbuf.find("</ejb>") - i + 6, parseEJB(scr));
-							cout << getTimeStr() + "EJB script parsed successfuly." << endl;
-						}
+				string json;
+				json = "{";
+
+				string cat = args.substr(args.find("=") + 1);
+				for (int i = 0; i < ejb_fromI("/res/db/main.db", "id"); i++) {
+					cout << "id" + to_string(i) << endl;
+					string compare = ejb_from("/res/db/recipes/category.db", "id" + to_string(i));
+					//cout << "COMP: " << cat << " / " << compare << endl;
+					cout << ejb_from("/res/db/recipes/category.db", "id0") << endl;
+					if (compare == cat) {
+						string id = "id" + to_string(i);
+						if (json.length() > 1) { json += ","; }
+						json += to_string(i)
+							+ ":{name:" + ejb_from("/res/db/recipes/name.db", id)
+							+ ",description:" + ejb_from("/res/db/recipes/description.db", id)
+							+ ",recipe:" + ejb_from("/res/db/recipes/recipe.db", id)
+							+ ",image:" + ejb_from("/res/db/recipes/image.db", id) + "}";
 					}
 				}
-				// Send the packet
-				cout << getTimeStr() + "Sending response packet." << endl;
-				send(client, strbuf.c_str(), strbuf.length(), 0);
+				json += "}";
+				cout << json << endl;
+				sendData(json, &client);
 			}
-			else
-			{
-				cout << getTimeStr() + "File not found. Sending 404." << endl;
-				strbuf = "HTTP/1.1 404 NOT FOUND\n\n<html><body><h1>Error 404: Page not found</h1></body></html>";
-				send(client, strbuf.c_str(), strbuf.length(), 0);
+			else {
+				sendPage(url, &client);
 			}
-			file.close();
 		}
-		cout << getTimeStr() + "Terminating connection." << endl;
+		// POST Request
+		else if (req.substr(0, 4) == "POST")
+		{
+			string url = req.substr(5, req.find(" ", 5) - 5);
+			if (url == "/") { url = "/index.html"; }
+
+			cout << getTimeStr() + "Received POST for: " << url << "\n";
+
+			string args = req.substr(req.find_last_of('\n') + 1);
+			string key[8];
+			string value[8];
+			int found = 0;
+			while (true)
+			{
+				key[found] = args.substr(0, args.find("="));
+				if (args.find("&") != string::npos) {
+					if (args.find("&") != args.find("=") + 1) {
+						value[found] = args.substr(args.find("=") + 1, args.find("&") - args.find("=") - 1);
+					}
+					else {
+						value[found] = "";
+					}
+					args.erase(0, args.find("&") + 1);
+					found += 1;
+				}
+				else {
+					value[found] = args.substr(args.find("=") + 1);
+					found += 1;
+					break;
+				}
+			}
+			for (int i = 0; i < found; i++) {
+				cout << key[i] << " = " << decodeURL(value[i]) << endl;
+			}
+
+			if (url == "/pages/recipes.html") {
+				string strID = ejb_from("/res/db/main.db", "id");
+				int id;
+				stringstream(strID) >> id;
+				cout << "Pushing new data with id [" << id << "]" << endl;
+
+				for (int i = 0; i < found; i++) {
+					ejb_push("/res/db/recipes/" + key[i] + ".db", "id" + to_string(id), value[i]);
+				}
+
+				ejb_push("/res/db/main.db", "id", to_string(id + 1));
+			}
+
+			sendPage(url, &client);
+		}
+		else {
+			cout << getTimeStr() << "Unknown request:\n";
+			cout << getTimeStr() << req << endl;
+		}
+		//cout << getTimeStr() + "Terminating connection." << endl;
 		shutdown(client, SD_SEND);
-		cout << "========================================" << endl;
+		//cout << "========================================" << endl;
 	}
 
 	return 0;

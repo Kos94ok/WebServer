@@ -1,16 +1,18 @@
-﻿Сборка начата 02.12.2015 12:57:56.
-     1>Проект "F:\Workspace\CWork\WebServer\WebServer\WebServer.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 06.12.2015 16:30:07.
+     1>Проект "E:\CWork\WebServer\WebServer\WebServer.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         F:\Microsoft Visual Studio 2013\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\WebServer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt WebServer.cpp
-         WebServer.cpp
+         D:\Games\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\WebServer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ejb.cpp
+         ejb.cpp
        Link:
-         F:\Microsoft Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Workspace\CWork\WebServer\Release\WebServer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Workspace\CWork\WebServer\Release\WebServer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Workspace\CWork\WebServer\Release\WebServer.lib" /MACHINE:X86 /SAFESEH Release\stdafx.obj
+         D:\Games\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\CWork\WebServer\Release\WebServer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\CWork\WebServer\Release\WebServer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\CWork\WebServer\Release\WebServer.lib" /MACHINE:X86 /SAFESEH Release\ejb.obj
+         Release\pages.obj
+         Release\stdafx.obj
          Release\WebServer.obj
          Создание кода
          Создание кода завершено
-         WebServer.vcxproj -> F:\Workspace\CWork\WebServer\Release\WebServer.exe
-     1>Сборка проекта "F:\Workspace\CWork\WebServer\WebServer\WebServer.vcxproj" завершена (целевые объекты Build).
+         WebServer.vcxproj -> E:\CWork\WebServer\Release\WebServer.exe
+     1>Сборка проекта "E:\CWork\WebServer\WebServer\WebServer.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:06.31
+Затраченное время: 00:00:02.07
