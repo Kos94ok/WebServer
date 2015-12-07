@@ -78,7 +78,7 @@ string cEJBMain::parse(string script)
 	{
 		string filename = args.substr(0, args.find(" "));
 		string entry = args.substr(args.find(" ") + 1);
-		from(filename, entry);
+		retval = from(filename, entry);
 	}
 	else if (cmd == "flush")
 	{

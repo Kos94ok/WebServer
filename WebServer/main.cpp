@@ -38,7 +38,10 @@ int main()
 		listen(listener, SOMAXCONN);
 
 		SOCKET client;
-		client = accept(listener, 0, 0);
+		sockaddr_in client_info;
+		int size = sizeof(client_info);
+
+		client = accept(listener, (sockaddr*)&client_info, &size);
 
 		char recbuf[65536] = "";
 		val = recv(client, recbuf, 65536, 0);
@@ -49,7 +52,7 @@ int main()
 		{
 			string url = req.substr(4, req.find(" ", 4) - 4), args;
 			if (url == "/") { url = "/index.html"; }
-			cout << util.getTimeStr() + "Received GET for: " << url << "\n";
+			cout << util.getTimeStr() + "Received GET for: " << url << " [" << inet_ntoa(client_info.sin_addr) << "]\n";
 
 			if (url.find("?") != string::npos) {
 				args = url.substr(url.find("?") + 1);
@@ -90,7 +93,7 @@ int main()
 			string url = req.substr(5, req.find(" ", 5) - 5);
 			if (url == "/") { url = "/index.html"; }
 
-			cout << util.getTimeStr() + "Received POST for: " << url << "\n";
+			cout << util.getTimeStr() + "Received POST for: " << url << " [" << inet_ntoa(client_info.sin_addr) << "]\n";
 
 			string args = req.substr(req.find_last_of('\n') + 1);
 			string key[8];
@@ -131,9 +134,9 @@ int main()
 			sock.sendPage(url, &client);
 		}
 		else {
-			cout << util.getTimeStr() << "Unknown request:\n";
+			cout << util.getTimeStr() << "Unknown request" << " [" << inet_ntoa(client_info.sin_addr) << "]:\n";;
 			if (req.length() == 0 || req == " ") { req = "[NO DATA]"; }
-			cout << util.getTimeStr() << req << endl;
+			cout << util.getTimeStr() << req << "\n";
 
 			sock.sendData("hi", &client);
 		}

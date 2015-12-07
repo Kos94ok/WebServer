@@ -6,6 +6,9 @@
 #pragma once
 #pragma comment(lib, "Ws2_32.lib")
 
+#define _CRT_SECURE_NO_WARNINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+
 #include "targetver.h"
 
 #include <stdio.h>
@@ -25,8 +28,6 @@
 #include <string>
 #include <sstream>
 #include <vector>
-
-#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
