@@ -4,15 +4,36 @@
 
 cUtilMain util;
 
+vector<string> dictIn;
+vector<string> dictOut;
+
+void cUtilMain::addDecoderEntry(string in, string out)
+{
+	dictIn.push_back(in);
+	dictOut.push_back(out);
+}
+
+void cUtilMain::initDecoder()
+{
+	addDecoderEntry("%3A", ":");
+	addDecoderEntry("%2F", "/");
+	addDecoderEntry("%21", " ");
+	addDecoderEntry("%2C", ",");
+	addDecoderEntry("+", " ");
+	addDecoderEntry("%0D%0A", "%01");
+}
+
 string cUtilMain::decodeString(string str)
 {
-	string val;
-	while (str.find("%3A") != string::npos || str.find("%2F") != string::npos || str.find("%21") != string::npos)
-	{
-		val = str.substr(str.find("%"), 3);
-		if (val == "%3A") { str.replace(str.find("%"), 3, ":"); }
-		else if (val == "%2F") { str.replace(str.find("%"), 3, "/"); }
-		else if (val == "%21") { str.replace(str.find("%"), 3, " "); }
+	bool repeat = true;
+	while (repeat) {
+		repeat = false;
+		for (int i = 0; i < (int)dictIn.size(); i++) {
+			if (str.find(dictIn[i]) != string::npos) {
+				str.replace(str.find(dictIn[i]), dictIn[i].length(), dictOut[i]);
+				repeat = true;
+			}
+		}
 	}
 	return str;
 }

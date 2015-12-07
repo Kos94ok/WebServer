@@ -31,6 +31,7 @@ int main()
 	if (val == SOCKET_ERROR) { printf("Error at socket(): %ld\n", WSAGetLastError()); getchar(); }
 	freeaddrinfo(result);
 
+	util.initDecoder();
 	cout << util.getTimeStr() + "Listening at port " << port << "..." << endl;
 	while (true)
 	{
@@ -39,13 +40,8 @@ int main()
 		SOCKET client;
 		client = accept(listener, 0, 0);
 
-		char recbuf[2048] = "";
-		val = recv(client, recbuf, 2048, 0);
-		if (val > 0) {
-			//cout << "\nNew message:" << "\n========================================\n";
-			//cout << recbuf << endl;
-			//cout << "\n========================================\n";
-		}
+		char recbuf[65536] = "";
+		val = recv(client, recbuf, 65536, 0);
 
 		string req = recbuf;
 		// GET Request
@@ -69,7 +65,7 @@ int main()
 					string cat = args.substr(args.find("=") + 1);
 					for (int i = 0; i < ejb.fromI("/res/db/main.db", "id"); i++) {
 						string compare = ejb.from("/res/db/recipes/category.db", "id" + to_string(i));
-						if (cat == compare) {
+						if (cat == compare || (cat == "all" && compare.length() > 0)) {
 							string id = "id" + to_string(i);
 							if (json.length() > 1) { json += ","; }
 
@@ -119,13 +115,8 @@ int main()
 					break;
 				}
 			}
-			for (int i = 0; i < found; i++) {
-				cout << key[i] << " = " << util.decodeString(value[i]) << endl;
-			}
-
 			if (url == "/pages/recipes_new.html") {
 				string strID = ejb.from("/res/db/main.db", "id");
-				cout << strID << endl;
 				int id;
 				stringstream(strID) >> id;
 				cout << "Pushing new data with id [" << id << "]" << endl;
@@ -143,10 +134,10 @@ int main()
 			cout << util.getTimeStr() << "Unknown request:\n";
 			if (req.length() == 0 || req == " ") { req = "[NO DATA]"; }
 			cout << util.getTimeStr() << req << endl;
+
+			sock.sendData("hi", &client);
 		}
-		//cout << getTimeStr() + "Terminating connection." << endl;
 		shutdown(client, SD_SEND);
-		//cout << "========================================" << endl;
 	}
 
 	return 0;

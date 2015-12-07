@@ -24,6 +24,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <vector>
 
 #define _CRT_SECURE_NO_WARNINGS
 

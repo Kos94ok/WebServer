@@ -1,4 +1,4 @@
-﻿Сборка начата 07.12.2015 17:26:49.
+﻿Сборка начата 07.12.2015 18:32:21.
      1>Проект "F:\Workspace\CWork\WebServer\WebServer\WebServer.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          F:\Microsoft Visual Studio 2013\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\WebServer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -16,4 +16,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:02.27
+Затраченное время: 00:00:01.92
