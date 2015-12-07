@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы исходного кода\Util">
+      <UniqueIdentifier>{5c4193ba-7c66-40b1-a51f-f8f6351f80ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Main">
+      <UniqueIdentifier>{0d4c41bc-8626-4720-b039-a5a3a25826ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\EJB">
+      <UniqueIdentifier>{8268d327-5821-4a60-a256-2b9c6e4d1720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Socket">
+      <UniqueIdentifier>{96e735e3-a4be-416d-ae4c-66019470a720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{9fabd72c-b409-43e9-b0b4-fe9545040565}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,19 +39,34 @@
     <ClInclude Include="targetver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Файлы исходного кода\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Файлы исходного кода\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.h">
+      <Filter>Файлы исходного кода\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="ejb.h">
+      <Filter>Файлы исходного кода\EJB</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="main.cpp">
+      <Filter>Файлы исходного кода\Main</Filter>
     </ClCompile>
-    <ClCompile Include="WebServer.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="util.cpp">
+      <Filter>Файлы исходного кода\Util</Filter>
     </ClCompile>
-    <ClCompile Include="pages.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="socket.cpp">
+      <Filter>Файлы исходного кода\Socket</Filter>
     </ClCompile>
     <ClCompile Include="ejb.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\EJB</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precompiled Header</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
