@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# VS temp files
+ipch/*
+Debug/*
+*.pdb
+*.ipch
+*.tlog
+WebServer/Release/WebServer.log
