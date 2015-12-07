@@ -53,3 +53,4 @@ Debug/*
 *.ipch
 *.tlog
 WebServer/Release/WebServer.log
+WebServer.opensdf
