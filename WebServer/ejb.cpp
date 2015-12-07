@@ -1,22 +1,20 @@
 
 #include "stdafx.h"
+#include "ejb.h"
 
-string ejb_from(string filename, string entry)
+cEJBMain ejb;
+
+string cEJBMain::from(string filename, string entry)
 {
 	string retval, parse;
 	ifstream file(mainpath + filename);
-	file.close();
-	file.open(mainpath + filename);
 	if (file.good())
 	{
 		while (!file.eof())
 		{
-			char buf[1024];
-			file.getline(buf, 1024);
-			parse = buf;
-			cout << parse << endl;
+			getline(file, parse);
 			if (parse.substr(0, parse.find(" = ")) == entry) {
-				retval = parse.substr(parse.find(" = ") + 3);
+				retval = parse.substr(parse.find(" = ") + 3, parse.length() - parse.find(" = ") - 3);
 				break;
 			}
 		}
@@ -25,21 +23,21 @@ string ejb_from(string filename, string entry)
 	return retval;
 }
 
-int ejb_fromI(string filename, string entry)
+int cEJBMain::fromI(string filename, string entry)
 {
 	int retval;
-	string str = ejb_from(filename, entry);
+	string str = from(filename, entry);
 	stringstream(str) >> retval;
 	return retval;
 }
 
-void ejb_push(string filename, string key, string value)
+void cEJBMain::push(string filename, string key, string value)
 {
 	string parse;
 	string inName = mainpath + filename;
-	string outName = mainpath + filename + "_temp";
 	ifstream in(inName);
-	stringstream tempOut;
+	string tempOut[256];
+	int stringsOut = 0;
 	bool added = false;
 	int lifeguard = 0;
 	if (in.good())
@@ -52,22 +50,26 @@ void ejb_push(string filename, string key, string value)
 			parse = buf;
 			if (parse.substr(0, parse.find(" = ")) == key) {
 				added = true;
-				tempOut << key << " = " << value << "\r\n";
+				tempOut[stringsOut++] = key + " = " + value;
 			}
 			else {
-				tempOut << parse;
+				tempOut[stringsOut++] = parse;
 			}
 		}
 	}
 	if (!added) {
-		tempOut << key << " = " << value << "\r\n";
+		tempOut[stringsOut++] = key + " = " + value;
 	}
 	DeleteFile(wstring(inName.begin(), inName.end()).c_str());
 	ofstream out(inName);
-	out << tempOut.str();
+	for (int i = 0; i < stringsOut; i++) {
+		if (tempOut[i].length() > 0) {
+			out << tempOut[i] << endl;
+		}
+	}
 }
 
-string parseEJB(string script)
+string cEJBMain::parse(string script)
 {
 	string retval = "", parse;
 	string cmd = script.substr(0, script.find(":"));
@@ -76,7 +78,7 @@ string parseEJB(string script)
 	{
 		string filename = args.substr(0, args.find(" "));
 		string entry = args.substr(args.find(" ") + 1);
-		ejb_from(filename, entry);
+		from(filename, entry);
 	}
 	else if (cmd == "flush")
 	{
