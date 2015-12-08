@@ -56,3 +56,6 @@ WebServer/Release/WebServer.log
 WebServer.opensdf
 ipch/webserver-1fb5ac3a/webserver-b1bf6b1b.ipch
 *.tlog
+WebServer/Release/WebServer.Build.CppClean.log
+*.ipch
+WebServer/Release/WebServer.Build.CppClean.log
