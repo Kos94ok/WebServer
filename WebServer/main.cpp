@@ -5,13 +5,56 @@
 #include "ejb.h"
 #include "thread.h"
 
-std::string mainpath = "../../ChristmasTime/";
+void fileConsole()
+{
+	std::ifstream file("console");
+	if (!file.good()) { return; }
+	while (true)
+	{
+		std::string buf;
+		file.open("console");
+		if (!file.eof()) {
+			std::getline(file, buf);
+			if (buf == "hide") { ShowWindow(GetConsoleWindow(), SW_HIDE); }
+			else if (buf == "show") { ShowWindow(GetConsoleWindow(), SW_SHOW); }
+			file.close();
+			std::ofstream clr("console");
+			clr.close();
+		}
+		else {
+			file.close();
+		}
+		Sleep(1000);
+	}
+}
 
 int main()
 {
 	std::vector<std::thread> threadPool;
 
 	util.settings.load();
+	//ShowWindow(GetConsoleWindow(), SW_SHOWMINIMIZED);
+	std::thread fileConsole(fileConsole);
+	// Clear log
+	if (util.settings.enableLog == 1) {
+		std::ofstream file("log.txt");
+		file << "Hi, I'm a log." << "\n";
+		file.close();
+	}
+
+	// Check index
+	std::ifstream indexTest(util.settings.mainPath + "index.html");
+	if (indexTest.good()) {
+		util.cout("Index found at \"" + util.settings.mainPath + "index.html" + "\"", 16);
+		indexTest.close();
+	}
+	else {
+		util.cout("Can't find index at \"" + util.settings.mainPath + "index.html" + "\"", 16);
+		getchar();
+		return 0;
+	}
+
+	// Initialize sockets
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
 
@@ -30,15 +73,15 @@ int main()
 
 	SOCKET listener = INVALID_SOCKET;
 	listener = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
-	if (val == INVALID_SOCKET) { std::cout << "Invalid socket" << std::endl; getchar(); }
+	if (val == INVALID_SOCKET) { std::cout << "Invalid socket" << std::endl; getchar(); return 0; }
 	val = bind(listener, result->ai_addr, result->ai_addrlen);
-	if (val == SOCKET_ERROR) { printf("Error at socket(): %ld\n", WSAGetLastError()); getchar(); }
+	if (val == SOCKET_ERROR) { printf("Error at socket(): %ld\n", WSAGetLastError()); getchar(); return 0; }
 	freeaddrinfo(result);
 
 	using namespace std;
 
 	util.initDecoder();
-	cout << util.getTimeStr() + "Listening at port " << port << "..." << endl;
+	util.cout("Listening at port " + port + "...", 16);
 	while (true)
 	{
 		listen(listener, SOMAXCONN);

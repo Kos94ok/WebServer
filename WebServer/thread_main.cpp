@@ -20,7 +20,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 	{
 		string url = req.substr(4, req.find(" ", 4) - 4), args;
 		if (url == "/") { url = "/index.html"; }
-		util.cout("Received GET for: " + url + " [" + inet_ntoa(client_info.sin_addr) + "]", 8, threadId);
+		util.cout("Received GET for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
 
 		// Normal request
 		if (url.substr(0, 1) == "/")
@@ -31,7 +31,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 
 				// Recipe data
 				if (url.find("/pages/recipes.html") != string::npos) {
-					util.cout("Got it. Assembling JSON.", 6, threadId);
+					util.cout("Recipe data request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
 
 					string json;
 					json = "{";
@@ -55,12 +55,12 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 				}
 			}
 			else {
-				sock.sendPage(url, &client, threadId);
+				sock.sendPage(url, &client, threadId, inet_ntoa(client_info.sin_addr));
 			}
 		}
 		// Proxy request
 		else if (url.substr(0, 7) == "http://") {
-			util.cout("Denying GET proxy request to \"" + url + "\" [" + inet_ntoa(client_info.sin_addr) + "]", 9, threadId);
+			util.cout("Denying GET proxy request to \"" + url + "\"", 9, inet_ntoa(client_info.sin_addr), threadId);
 			sock.sendError(1000, &client);
 		}
 	}
@@ -73,7 +73,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 		// Normal request
 		if (url.substr(0, 1) == "/")
 		{
-			util.cout("Received POST for: " + url + " [" + inet_ntoa(client_info.sin_addr) + "]", 8, threadId);
+			util.cout("Received POST for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
 
 			string args = req.substr(req.find_last_of('\n') + 1);
 			string key[8];
@@ -102,7 +102,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 				string strID = ejb.from("/res/db/main.db", "id");
 				int id;
 				stringstream(strID) >> id;
-				util.cout("Pushing new data with id [" + to_string(id) + "]", 7, threadId);
+				util.cout("Pushing new data with id", 7, inet_ntoa(client_info.sin_addr), threadId);
 
 				for (int i = 0; i < found; i++) {
 					ejb.push("/res/db/recipes/" + key[i] + ".db", "id" + to_string(id), util.decodeString(value[i]));
@@ -111,18 +111,18 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 				ejb.push("/res/db/main.db", "id", to_string(id + 1));
 			}
 
-			sock.sendPage(url, &client, threadId);
+			sock.sendPage(url, &client, threadId, inet_ntoa(client_info.sin_addr));
 		}
 		// Proxy request
 		else if (url.substr(0, 7) == "http://") {
-			util.cout("Denying POST proxy request to \"" + url + "\" [" + inet_ntoa(client_info.sin_addr) + "]", 9, threadId);
+			util.cout("Denying POST proxy request to \"" + url + "\"", 9, inet_ntoa(client_info.sin_addr), threadId);
 			sock.sendError(1000, &client);
 		}
 	}
 	// Unknown request
 	else {
 		if (req.length() == 0 || req == " ") { req = "[NO DATA]"; }
-		util.cout("Unknown request [" + string(inet_ntoa(client_info.sin_addr)) + "]:\n" + req, 9, threadId);
+		util.cout("Unknown request:\n" + req, 9, inet_ntoa(client_info.sin_addr), threadId);
 
 		sock.sendData("hi", &client);
 	}

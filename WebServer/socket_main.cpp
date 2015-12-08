@@ -8,15 +8,15 @@ using namespace std;
 
 cSocketMain sock;
 
-void cSocketMain::sendPage(string url, SOCKET* client, int threadId)
+void cSocketMain::sendPage(string url, SOCKET* client, int threadId, string ip)
 {
 	string strbuf, buf;
 	ifstream file;
-	file.open(mainpath + url, ios::in | ios::binary);
+	file.open(util.settings.mainPath + url, ios::in | ios::binary);
 	if (file.good())
 	{
 		// Reading the file
-		util.cout("File \"" + url + "\" found. Sending a response.", 7, threadId);
+		util.cout("File \"" + url + "\" found. Sending content.", 7, ip, threadId);
 		strbuf.clear();
 		ostringstream oss;
 		oss << "HTTP/1.1 200 OK\n\n";
@@ -37,7 +37,7 @@ void cSocketMain::sendPage(string url, SOCKET* client, int threadId)
 	}
 	else
 	{
-		util.cout("File \"" + url + "\" not found. Sending 404.", 10, threadId);
+		util.cout("File \"" + url + "\" not found. Sending 404.", 10, ip, threadId);
 		sendError(404, client);
 	}
 	file.close();

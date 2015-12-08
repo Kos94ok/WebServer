@@ -1,6 +1,7 @@
 
 #include "stdafx.h"
 #include "ejb.h"
+#include "util.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ cEJBMain ejb;
 string cEJBMain::from(string filename, string entry)
 {
 	string retval, parse;
-	ifstream file(mainpath + filename);
+	ifstream file(util.settings.mainPath + filename);
 	if (file.good())
 	{
 		while (!file.eof())
@@ -36,7 +37,7 @@ int cEJBMain::fromI(string filename, string entry)
 void cEJBMain::push(string filename, string key, string value)
 {
 	string parse;
-	string inName = mainpath + filename;
+	string inName = util.settings.mainPath + filename;
 	ifstream in(inName);
 	string tempOut[256];
 	int stringsOut = 0;
@@ -85,7 +86,7 @@ string cEJBMain::parse(string script)
 	else if (cmd == "flush")
 	{
 		string filename = args.substr(0, args.find(" "));
-		ifstream file(mainpath + filename);
+		ifstream file(util.settings.mainPath + filename);
 		if (file.good())
 		{
 			ostringstream oss;

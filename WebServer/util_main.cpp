@@ -54,19 +54,54 @@ string cUtilMain::getTimeStr()
 	val += to_string(now.tm_min) + ":";
 	if (now.tm_sec < 10) { val += "0"; }
 	val += to_string(now.tm_sec);
+
+	// Milliseconds
+	val += ".";
+	int ms = timeGetTime() % 1000;
+	if (ms < 10) { val += "0"; }
+	if (ms < 100) { val += "0"; }
+	val += to_string(ms);
+
+	// Return
 	val += " ";
 	return val;
 }
 
-void cUtilMain::cout(string str, int level, int threadId)
+void cUtilMain::cout(string str, int level, string prefix, int threadId)
 {
-	if (settings.enableCout == 0 || level < settings.outputLevel) { return; }
+	if (settings.enableLog == 0 && (settings.enableCout == 0 || level < settings.outputLevel)) { return; }
+	// Add prefix
+	if (prefix != "") {
+		str = prefix + "] " + str;
+		if (threadId == -1) {
+			str = "[" + str;
+		}
+	}
 	// Add thread id
 	if (threadId != -1) {
-		str = "[" + to_string(threadId) + "] " + str;
+		if (prefix == "") {
+			str = "[" + to_string(threadId) + "] " + str;
+		}
+		else {
+			str = "[" + to_string(threadId) + "/" + str;
+		}
 	}
 	// Add timestamp
 	str = getTimeStr() + str;
+
+	// Flush to file
+	if (settings.enableLog == 1) {
+		ofstream file("log.txt", ios::app);
+		file << str << "\n";
+		file.close();
+	}
+
+	if (settings.enableCout == 0 || level < settings.outputLevel) { return; }
+
+	// Check the length
+	if (settings.consoleWidth < 1000 && (int)str.length() > settings.consoleWidth - 1) {
+		str = str.substr(0, settings.consoleWidth - 4) + "...";
+	}
 	// Flush data
 	coutAccess.lock();
 
@@ -77,12 +112,18 @@ void cUtilMain::cout(string str, int level, int threadId)
 
 void cSettings::load()
 {
-	string val = getEntry("enableCout");
+	string val = getEntry("enableLog");
+	stringstream(val) >> enableLog;
+	val = getEntry("enableCout");
 	stringstream(val) >> enableCout;
 	val = getEntry("enableProxy");
 	stringstream(val) >> enableProxy;
 	val = getEntry("outputLevel");
 	stringstream(val) >> outputLevel;
+	val = getEntry("consoleWidth");
+	stringstream(val) >> consoleWidth;
+	val = getEntry("mainPath");
+	stringstream(val) >> mainPath;
 }
 
 string cSettings::getEntry(string name)
