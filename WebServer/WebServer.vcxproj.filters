@@ -28,6 +28,9 @@
     <Filter Include="Precompiled Header">
       <UniqueIdentifier>{9fabd72c-b409-43e9-b0b4-fe9545040565}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы исходного кода\Thread">
+      <UniqueIdentifier>{bb9e74b0-e1bf-4873-bee1-3e3b9fcf05e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -39,9 +42,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>Файлы исходного кода\Main</Filter>
-    </ClInclude>
     <ClInclude Include="util.h">
       <Filter>Файлы исходного кода\Util</Filter>
     </ClInclude>
@@ -51,22 +51,28 @@
     <ClInclude Include="ejb.h">
       <Filter>Файлы исходного кода\EJB</Filter>
     </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>Файлы исходного кода\Thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Файлы исходного кода\Main</Filter>
     </ClCompile>
-    <ClCompile Include="util.cpp">
-      <Filter>Файлы исходного кода\Util</Filter>
-    </ClCompile>
-    <ClCompile Include="socket.cpp">
-      <Filter>Файлы исходного кода\Socket</Filter>
-    </ClCompile>
-    <ClCompile Include="ejb.cpp">
-      <Filter>Файлы исходного кода\EJB</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="ejb_main.cpp">
+      <Filter>Файлы исходного кода\EJB</Filter>
+    </ClCompile>
+    <ClCompile Include="socket_main.cpp">
+      <Filter>Файлы исходного кода\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="util_main.cpp">
+      <Filter>Файлы исходного кода\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_main.cpp">
+      <Filter>Файлы исходного кода\Thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

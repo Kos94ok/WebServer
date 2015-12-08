@@ -4,8 +4,9 @@
 class cSocketMain
 {
 public:
-	void sendPage(string url, SOCKET* client);
-	void sendData(string data, SOCKET* client);
+	void sendPage(std::string url, SOCKET* client, int threadId);
+	void sendData(std::string data, SOCKET* client);
+	void sendError(int code, SOCKET* client);
 };
 
 extern cSocketMain sock;

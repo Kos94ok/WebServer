@@ -4,11 +4,11 @@
 class cEJBMain
 {
 public:
-	string from(string filename, string entry);
-	int fromI(string filename, string entry);
-	void push(string filename, string key, string value);
+	std::string from(std::string filename, std::string entry);
+	int fromI(std::string filename, std::string entry);
+	void push(std::string filename, std::string key, std::string value);
 
-	string parse(string script);
+	std::string parse(std::string script);
 };
 
 extern cEJBMain ejb;

@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <mutex>
 
 #ifndef WIN32_LEAN_AND_MEAN
 //#define WIN32_LEAN_AND_MEAN
@@ -28,7 +29,6 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <thread>
 
-using namespace std;
-
-extern string mainpath;
+extern std::string mainpath;
