@@ -124,6 +124,8 @@ void cSettings::load()
 	stringstream(val) >> consoleWidth;
 	val = getEntry("mainPath");
 	stringstream(val) >> mainPath;
+	val = getEntry("mainPort");
+	stringstream(val) >> mainPort;
 }
 
 string cSettings::getEntry(string name)

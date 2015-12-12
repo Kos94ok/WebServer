@@ -9,6 +9,7 @@ public:
 	int enableProxy = 0;
 	int outputLevel = 16;
 	int consoleWidth = 80;
+	int mainPort = 8080;
 	std::string mainPath = "Website/";
 
 	void load();

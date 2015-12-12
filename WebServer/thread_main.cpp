@@ -7,6 +7,33 @@
 
 std::vector<cThreadData> threadData;
 
+int parseArguments(std::string args, std::string* key, std::string* value)
+{
+	using namespace std;
+
+	int found = 0;
+	while (true)
+	{
+		key[found] = args.substr(0, args.find("="));
+		if (args.find("&") != string::npos) {
+			if (args.find("&") != args.find("=") + 1) {
+				value[found] = args.substr(args.find("=") + 1, args.find("&") - args.find("=") - 1);
+			}
+			else {
+				value[found] = "";
+			}
+			args.erase(0, args.find("&") + 1);
+			found += 1;
+		}
+		else {
+			value[found] = args.substr(args.find("=") + 1);
+			found += 1;
+			break;
+		}
+	}
+	return found;
+}
+
 void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 {
 	using namespace std;
@@ -18,7 +45,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 	// GET Request
 	if (req.substr(0, 3) == "GET")
 	{
-		string url = req.substr(4, req.find(" ", 4) - 4), args;
+		string url = req.substr(4, req.find(" ", 4) - 4);
 		if (url == "/") { url = "/index.html"; }
 		util.cout("Received GET for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
 
@@ -26,17 +53,24 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 		if (url.substr(0, 1) == "/")
 		{
 			if (url.find("?") != string::npos) {
-				args = url.substr(url.find("?") + 1);
+				string args = url.substr(url.find("?") + 1);
 				url = url.substr(0, url.find("?"));
+				string key[8];
+				string value[8];
+				int found = parseArguments(args, key, value);
 
-				// Recipe data
-				if (url.find("/pages/recipes.html") != string::npos) {
-					util.cout("Recipe data request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
+				// Recipe data request
+				if (args.find("req=recipe_brief") != string::npos) {
+					util.cout("Recipe brief request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
 
 					string json;
 					json = "{";
 
-					string cat = args.substr(args.find("=") + 1);
+					string cat;
+					for (int i = 0; i < found; i++) {
+						if (key[i] == "category") { cat = value[i]; }
+					}
+
 					for (int i = 0; i < ejb.fromI("/res/db/main.db", "id"); i++) {
 						string compare = ejb.from("/res/db/recipes/category.db", "id" + to_string(i));
 						if (cat == compare || (cat == "all" && compare.length() > 0)) {
@@ -51,6 +85,20 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 						}
 					}
 					json += "}";
+					sock.sendData(json, &client);
+				}
+				else if (args.find("req=recipe_text") != string::npos) {
+					util.cout("Recipe whole request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
+
+					string json;
+
+					string id = "id";
+					for (int i = 0; i < found; i++) {
+						if (key[i] == "id") { id += value[i]; }
+					}
+
+					json = "{\"recipe\":\"" + ejb.from("/res/db/recipes/recipe.db", id) + "\"}";
+
 					sock.sendData(json, &client);
 				}
 			}
@@ -78,26 +126,8 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 			string args = req.substr(req.find_last_of('\n') + 1);
 			string key[8];
 			string value[8];
-			int found = 0;
-			while (true)
-			{
-				key[found] = args.substr(0, args.find("="));
-				if (args.find("&") != string::npos) {
-					if (args.find("&") != args.find("=") + 1) {
-						value[found] = args.substr(args.find("=") + 1, args.find("&") - args.find("=") - 1);
-					}
-					else {
-						value[found] = "";
-					}
-					args.erase(0, args.find("&") + 1);
-					found += 1;
-				}
-				else {
-					value[found] = args.substr(args.find("=") + 1);
-					found += 1;
-					break;
-				}
-			}
+			int found = parseArguments(args, key, value);
+
 			if (url == "/pages/recipes_new.html") {
 				string strID = ejb.from("/res/db/main.db", "id");
 				int id;

@@ -5,6 +5,12 @@
 #include "ejb.h"
 #include "thread.h"
 
+void parseConsoleCommand(std::string cmd)
+{
+	if (cmd == "hide") { ShowWindow(GetConsoleWindow(), SW_HIDE); }
+	else if (cmd == "show") { ShowWindow(GetConsoleWindow(), SW_SHOW); }
+}
+
 void fileConsole()
 {
 	std::ifstream file("console");
@@ -15,8 +21,7 @@ void fileConsole()
 		file.open("console");
 		if (!file.eof()) {
 			std::getline(file, buf);
-			if (buf == "hide") { ShowWindow(GetConsoleWindow(), SW_HIDE); }
-			else if (buf == "show") { ShowWindow(GetConsoleWindow(), SW_SHOW); }
+			parseConsoleCommand(buf);
 			file.close();
 			std::ofstream clr("console");
 			clr.close();
@@ -28,13 +33,18 @@ void fileConsole()
 	}
 }
 
-int main()
+int main(int argc, char* argv[])
 {
 	std::vector<std::thread> threadPool;
 
 	util.settings.load();
-	//ShowWindow(GetConsoleWindow(), SW_SHOWMINIMIZED);
 	std::thread fileConsole(fileConsole);
+
+	// Arguments
+	for (int i = 1; i < argc; i++) {
+		parseConsoleCommand(argv[i]);
+	}
+
 	// Clear log
 	if (util.settings.enableLog == 1) {
 		std::ofstream file("log.txt");
@@ -67,7 +77,7 @@ int main()
 	hints.ai_protocol = IPPROTO_TCP;
 	hints.ai_flags = AI_PASSIVE;
 
-	std::string port = "8080";
+	std::string port = std::to_string(util.settings.mainPort);
 	// Resolve the local address and port to be used by the server
 	getaddrinfo(NULL, port.c_str(), &hints, &result);
 
@@ -92,7 +102,7 @@ int main()
 
 		client = accept(listener, (sockaddr*)&client_info, &size);
 
-		float curtime = (int)timeGetTime();
+		float curtime = (float)timeGetTime();
 		if (threadData.size() > 0)
 		{
 			while (threadData[(int)threadData.size() - 1].state == THREAD_DOWN)
