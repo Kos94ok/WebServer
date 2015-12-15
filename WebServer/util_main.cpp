@@ -24,11 +24,14 @@ void cUtilMain::initDecoder()
 	addDecoderEntry("%2C", ",");
 	addDecoderEntry("%3C", "<");
 	addDecoderEntry("%3E", ">");
-	addDecoderEntry("%92", "'");
+	addDecoderEntry("%92", "\\");
 	addDecoderEntry("%28", "(");
 	addDecoderEntry("%29", ")");
 	addDecoderEntry("%96", "-");
 	addDecoderEntry("%26", "&");
+	addDecoderEntry("%27", "'");
+	addDecoderEntry("%22", "\"");
+	addDecoderEntry("%3B", ";");
 	addDecoderEntry("+", " ");
 	addDecoderEntry("%0D%0A", "<br>");
 }
