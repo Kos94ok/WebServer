@@ -63,7 +63,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 				if (args.find("req=recipe_brief") != string::npos) {
 					util.cout("Recipe brief request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
 
-					string json;
+					string json, miniJson;
 					json = "{";
 
 					string cat;
@@ -71,7 +71,46 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 						if (key[i] == "category") { cat = value[i]; }
 					}
 
+					int iter = 0;
+					vector<string> colA;
+					vector<string> colB;
+					vector<string> colC;
+
 					for (int i = 0; i < ejb.fromI("/res/db/main.db", "id"); i++) {
+						string compare = ejb.from("/res/db/recipes/category.db", "id" + to_string(i));
+						if (cat == compare || (cat == "all" && compare.length() > 0)) {
+							string id = "id" + to_string(i);
+
+							miniJson = "\"" + to_string(i) + "\""
+								+ ":{\"name\":\"" + ejb.from("/res/db/recipes/name.db", id)
+								+ "\",\"description\":\"" + ejb.from("/res/db/recipes/description.db", id)
+								+ "\",\"image\":\"" + ejb.from("/res/db/recipes/image.db", id) + "\"}";
+							if (iter == 0) { colA.push_back(miniJson); iter = 1; }
+							else if (iter == 1) { colB.push_back(miniJson); iter = 2; }
+							else if (iter == 2) { colC.push_back(miniJson); iter = 0; }
+						}
+					}
+
+					json += "\"column0\":{";
+					for (int i = 0; i < (int)colA.size(); i++) {
+						json += colA[i];
+						if (i < (int)colA.size() - 1) { json += ","; }
+					}
+					json += "},";
+					json += "\"column1\":{";
+					for (int i = 0; i < (int)colB.size(); i++) {
+						json += colB[i];
+						if (i < (int)colB.size() - 1) { json += ","; }
+					}
+					json += "},";
+					json += "\"column2\":{";
+					for (int i = 0; i < (int)colC.size(); i++) {
+						json += colC[i];
+						if (i < (int)colC.size() - 1) { json += ","; }
+					}
+					json += "}";
+
+					/*for (int i = 0; i < ejb.fromI("/res/db/main.db", "id"); i++) {
 						string compare = ejb.from("/res/db/recipes/category.db", "id" + to_string(i));
 						if (cat == compare || (cat == "all" && compare.length() > 0)) {
 							string id = "id" + to_string(i);
@@ -83,7 +122,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 								+ "\",\"recipe\":\"" + ejb.from("/res/db/recipes/recipe.db", id)
 								+ "\",\"image\":\"" + ejb.from("/res/db/recipes/image.db", id) + "\"}";
 						}
-					}
+					}*/
 					json += "}";
 					sock.sendData(json, &client);
 				}
@@ -122,6 +161,8 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 		if (url.substr(0, 1) == "/")
 		{
 			util.cout("Received POST for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
+
+			cout << req << endl;
 
 			string args = req.substr(req.find_last_of('\n') + 1);
 			string key[8];

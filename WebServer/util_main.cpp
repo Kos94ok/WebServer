@@ -22,8 +22,15 @@ void cUtilMain::initDecoder()
 	addDecoderEntry("%2F", "/");
 	addDecoderEntry("%21", " ");
 	addDecoderEntry("%2C", ",");
+	addDecoderEntry("%3C", "<");
+	addDecoderEntry("%3E", ">");
+	addDecoderEntry("%92", "'");
+	addDecoderEntry("%28", "(");
+	addDecoderEntry("%29", ")");
+	addDecoderEntry("%96", "-");
+	addDecoderEntry("%26", "&");
 	addDecoderEntry("+", " ");
-	addDecoderEntry("%0D%0A", "%01");
+	addDecoderEntry("%0D%0A", "<br>");
 }
 
 string cUtilMain::decodeString(string str)

@@ -48,8 +48,8 @@ void cEJBMain::push(string filename, string key, string value)
 		while (!in.eof() && lifeguard < 1000)
 		{
 			lifeguard += 1;
-			char buf[256];
-			in.getline(buf, 256);
+			char buf[65536];
+			in.getline(buf, 65536);
 			parse = buf;
 			if (parse.substr(0, parse.find(" = ")) == key) {
 				added = true;
