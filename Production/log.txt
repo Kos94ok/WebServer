@@ -2953,3 +2953,775 @@ o.jpg
 22:50:08.475 [5/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
 22:50:09.599 [0/192.168.0.21] Received GET for: /res/images/header.jpg
 22:50:09.602 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+22:57:03.265 [0/192.168.0.21] Received POST for: /pages/recipes_new.html
+22:57:03.453 [0/192.168.0.21] Pushing new data with id
+22:57:03.458 [0/192.168.0.21] File "/pages/recipes_new.html" found. Sending content.
+22:57:04.764 [1/192.168.0.21] Received GET for: /res/css/960.css
+s
+22:57:04.764 [2/192.168.0.21] Received GET for: /res/css/project.css
+22:57:04.765 [3/192.168.0.21] Received GET for: /res/js/templates.js
+22:57:04.766 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+22:57:04.767 [0/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+22:57:04.767 [4/192.168.0.21] Received GET for: /res/js/recipes.js
+22:57:04.769 [1/192.168.0.21] File "/res/css/960.css" found. Sending content.
+22:57:04.772 [2/192.168.0.21] File "/res/css/project.css" found. Sending content.
+22:57:04.774 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+22:57:04.777 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+22:57:04.783 [4/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+22:57:04.815 [0/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+22:57:04.818 [0/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+22:57:04.968 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+22:57:04.970 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+22:57:05.986 [0/192.168.0.21] Received GET for: /pages/recipes.html
+22:57:05.989 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+22:57:05.037 [0/192.168.0.21] Received GET for: /res/css/960.css
+22:57:05.040 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+22:57:05.041 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+22:57:05.041 [1/192.168.0.21] Received GET for: /res/css/project.css
+22:57:05.041 [3/192.168.0.21] Received GET for: /res/js/templates.js
+22:57:05.041 [4/192.168.0.21] Received GET for: /res/js/recipes.js
+22:57:05.045 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+22:57:05.046 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+22:57:05.049 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+22:57:05.051 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+22:57:05.054 [4/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+22:57:05.057 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+22:57:05.076 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+22:57:05.079 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+22:57:05.222 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+22:57:05.225 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+22:57:05.239 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+22:57:05.240 [1/192.168.0.21] Received GET for: /res/images/turkey.jpg
+22:57:05.240 [2/192.168.0.21] Received GET for: /res/images/cookie.jpg
+22:57:05.241 [3/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+22:57:05.241 [4/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+22:57:05.242 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+22:57:05.245 [1/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+22:57:05.248 [2/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+22:57:05.251 [3/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+22:57:05.254 [4/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+22:57:05.346 [0/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+22:57:05.350 [0/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+22:57:07.948 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+22:57:07.951 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:57:09.705 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=48
+22:57:09.708 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+22:57:58.693 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+22:57:58.697 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:03.819 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=44
+22:58:03.823 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+22:58:51.648 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+22:58:51.651 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:53.730 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=dessert
+22:58:53.734 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:54.473 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+22:58:54.475 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:55.953 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=dessert
+22:58:55.956 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:55.488 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=drink
+22:58:55.491 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:56.172 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=side
+22:58:56.176 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:57.706 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+22:58:57.708 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:57.248 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+22:58:57.253 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:58.768 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+22:58:58.772 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:58.105 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=side
+22:58:58.108 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:58.473 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=drink
+22:58:58.477 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:59.913 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=dessert
+22:58:59.917 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+22:58:59.515 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+22:58:59.518 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:00:35.201 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=drink
+23:00:35.204 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:00:36.127 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+23:00:36.131 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:00:37.306 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=drink
+23:00:37.309 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:00:43.189 [0/192.168.0.21] Unknown request:
+[NO DATA]
+23:02:01.718 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:02:01.721 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:02:01.771 [0/192.168.0.21] Received GET for: /res/css/project.css
+23:02:01.772 [1/192.168.0.21] Received GET for: /res/js/recipes.js
+23:02:01.772 [2/192.168.0.21] Received GET for: /res/css/960.css
+23:02:01.772 [3/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:02:01.773 [5/192.168.0.21] Received GET for: /res/js/templates.js
+23:02:01.773 [4/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:02:01.775 [0/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:02:01.777 [1/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:02:01.779 [2/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:02:01.782 [3/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:02:01.785 [5/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:02:01.787 [4/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:02:01.841 [0/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:02:01.844 [0/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:02:01.972 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:02:01.972 [1/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:02:01.975 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:02:01.976 [2/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:02:01.977 [3/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:02:01.977 [4/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:02:01.977 [5/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:02:01.978 [1/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:02:01.984 [2/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:02:01.987 [3/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:02:01.991 [4/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:02:01.993 [5/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:02:01.019 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:02:01.022 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:02:04.247 [0/192.168.0.21] Received GET for: /pages/recipes_new.html
+23:02:04.250 [0/192.168.0.21] File "/pages/recipes_new.html" found. Sending content.
+23:02:04.285 [0/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:02:04.285 [1/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:02:04.286 [2/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:02:04.286 [3/192.168.0.21] Received GET for: /res/css/960.css
+23:02:04.288 [4/192.168.0.21] Received GET for: /res/css/project.css
+23:02:04.288 [5/192.168.0.21] Received GET for: /res/js/templates.js
+23:02:04.288 [0/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:02:04.290 [1/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:02:04.294 [2/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:02:04.296 [3/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:02:04.299 [4/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:02:04.301 [5/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:02:04.352 [0/192.168.0.21] Received GET for: /res/js/recipes.js
+23:02:04.354 [0/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:02:04.425 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:02:04.428 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:05:07.919 [0/192.168.0.21] Received POST for: /pages/recipes_new.html
+23:05:07.984 [0/192.168.0.21] Pushing new data with id
+23:05:07.991 [0/192.168.0.21] File "/pages/recipes_new.html" found. Sending content.
+23:05:07.013 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:05:07.014 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:05:07.015 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:05:07.015 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:05:07.015 [4/192.168.0.21] Received GET for: /res/js/recipes.js
+23:05:07.016 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:05:07.016 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:05:07.019 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:05:07.021 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:05:07.024 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:05:07.026 [4/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:05:07.029 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:05:07.045 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:05:07.052 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:05:07.187 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:05:07.190 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:05:09.618 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:05:09.621 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:05:09.699 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:05:09.699 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:05:09.700 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:05:09.700 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:05:09.700 [4/192.168.0.21] Received GET for: /res/js/recipes.js
+23:05:09.700 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:05:09.702 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:05:09.705 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:05:09.707 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:05:09.711 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:05:09.713 [4/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:05:09.717 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:05:09.730 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:05:09.738 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:05:09.898 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:05:09.901 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:05:09.922 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:05:09.926 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:05:09.929 [1/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:05:09.930 [3/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:05:09.930 [2/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:05:09.932 [4/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:05:09.933 [1/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:05:09.935 [3/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:05:09.938 [2/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:05:09.940 [4/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:05:09.943 [5/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:05:09.953 [5/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:05:10.863 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+23:05:10.866 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:12.771 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=49
+23:05:12.774 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:05:17.230 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=side
+23:05:17.233 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:18.765 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=41
+23:05:18.769 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:05:19.988 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+23:05:19.992 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:20.850 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=46
+23:05:20.854 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:05:21.327 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=drink
+23:05:21.330 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:22.837 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=49
+23:05:22.841 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:05:23.864 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=dessert
+23:05:23.867 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:23.092 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=dessert
+23:05:23.095 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:23.502 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=42
+23:05:23.505 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:05:27.818 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+23:05:27.822 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:28.024 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+23:05:28.027 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:29.163 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=44
+23:05:29.165 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:05:35.273 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+23:05:35.277 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:36.065 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=side
+23:05:36.069 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:37.647 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+23:05:37.650 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:05:38.782 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=47
+23:05:38.786 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:06:06.139 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+23:06:06.143 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:06:08.204 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_text&id=44
+23:06:08.207 [0/192.168.0.21] Recipe whole request. Assembling JSON.
+23:08:33.850 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:08:33.853 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:08:33.896 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:08:33.896 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:08:33.898 [2/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+
+23:08:33.899 [3/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:08:33.899 [4/192.168.0.21] Received GET for: /res/js/templates.js
+23:08:33.899 [5/192.168.0.21] Received GET for: /res/js/recipes.js
+23:08:33.901 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:08:33.907 [2/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:08:33.910 [3/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:08:33.913 [4/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:08:33.916 [5/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:08:33.918 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:08:33.934 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:08:33.066 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:08:33.066 [1/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:08:33.067 [2/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:08:33.068 [3/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:08:33.068 [4/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:08:33.068 [5/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:08:33.069 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:08:33.072 [1/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:08:33.075 [2/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:08:33.077 [4/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:08:33.081 [3/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:08:33.084 [5/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:08:33.131 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:08:33.135 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:08:34.478 [0/192.168.0.21] Received GET for: /pages/recipes_new.html
+23:08:34.481 [0/192.168.0.21] File "/pages/recipes_new.html" found. Sending content.
+23:08:34.518 [0/192.168.0.21] Received GET for: /res/css/project.css
+23:08:34.518 [1/192.168.0.21] Received GET for: /res/css/960.css
+23:08:34.519 [2/192.168.0.21] Received GET for: /res/js/templates.js
+23:08:34.519 [3/192.168.0.21] Received GET for: /res/js/recipes.js
+23:08:34.519 [4/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:08:34.519 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:08:34.521 [0/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:08:34.523 [1/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:08:34.527 [2/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:08:34.529 [3/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:08:34.531 [4/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:08:34.534 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:08:35.562 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:08:35.565 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:08:35.670 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:08:35.673 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:12:42.746 [0/192.168.0.21] Received POST for: /pages/recipes_new.html
+23:12:42.802 [0/192.168.0.21] Pushing new data with id
+23:12:42.808 [0/192.168.0.21] File "/pages/recipes_new.html" found. Sending content.
+23:12:42.833 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:12:42.834 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:12:42.834 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:12:42.835 [3/192.168.0.21] Received GET for: /res/js/recipes.js
+23:12:42.836 [4/192.168.0.21] Received GET for: /res/js/templates.js
+23:12:42.837 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:12:42.838 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:12:42.839 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:12:42.842 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:12:42.844 [3/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:12:42.847 [4/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:12:42.854 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:12:42.873 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:12:42.876 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:12:42.007 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:12:42.009 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:12:43.274 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:12:43.278 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:12:43.340 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:12:43.340 [1/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:12:43.341 [2/192.168.0.21] Received GET for: /res/js/recipes.js
+23:12:43.341 [3/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:12:43.341 [4/192.168.0.21] Received GET for: /res/css/project.css
+23:12:43.342 [5/192.168.0.21] Received GET for: /res/js/templates.js
+23:12:43.343 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:12:43.345 [1/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:12:43.348 [2/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:12:43.351 [3/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:12:43.354 [4/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:12:43.357 [5/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:12:43.388 [0/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:12:43.390 [0/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:12:44.606 [0/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:12:44.606 [1/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:12:44.607 [2/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:12:44.607 [3/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:12:44.608 [4/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:12:44.608 [5/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:12:44.610 [0/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:12:44.612 [1/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:12:44.615 [2/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:12:44.619 [3/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:12:44.621 [4/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:12:44.624 [5/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:12:44.655 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:12:44.658 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:12:49.502 [0/192.168.0.21] Unknown request:
+[NO DATA]
+23:13:20.755 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+23:13:20.758 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:13:24.557 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+23:13:24.559 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:13:48.941 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+23:13:48.944 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:13:56.941 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+23:13:56.944 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:13:57.564 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=side
+23:13:57.568 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:13:57.369 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=dessert
+23:13:57.372 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:13:58.833 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+23:13:58.836 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:21:08.491 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=main
+23:21:08.495 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:28:18.712 [0/192.168.0.21] Received GET for: /index.html
+23:28:18.715 [0/192.168.0.21] File "/index.html" found. Sending content.
+23:28:20.245 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:28:20.247 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:28:20.248 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:28:20.250 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:28:20.250 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:28:20.251 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:28:20.254 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:28:20.256 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:28:20.259 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:28:20.261 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:28:20.416 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:28:20.419 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:28:30.034 [0/192.168.0.21] Received GET for: /pages/facts.html
+23:28:30.036 [0/192.168.0.21] File "/pages/facts.html" found. Sending content.
+23:28:30.142 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:28:30.143 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:28:30.145 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:28:30.145 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:28:30.145 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:28:30.148 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:28:30.148 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:28:30.153 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:28:30.155 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:28:30.161 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:28:30.310 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:28:30.314 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:28:31.959 [0/192.168.0.21] Received GET for: /pages/history.html
+23:28:31.962 [0/192.168.0.21] File "/pages/history.html" found. Sending content.
+23:28:31.085 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:28:31.087 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:28:31.088 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:28:31.089 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:28:31.091 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:28:31.092 [3/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:28:31.096 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:28:31.101 [4/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:28:31.104 [3/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:28:31.244 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:28:31.247 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:28:32.941 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:28:32.944 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:28:32.035 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:28:32.037 [1/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:28:32.037 [2/192.168.0.21] Received GET for: /res/css/project.css
+23:28:32.038 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:28:32.039 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:28:32.040 [1/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:28:32.041 [4/192.168.0.21] Received GET for: /res/js/recipes.js
+23:28:32.041 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:28:32.043 [2/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:28:32.048 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:28:32.053 [4/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:28:32.056 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:28:32.064 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:28:32.071 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:28:32.181 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:28:32.181 [1/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:28:32.181 [2/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:28:32.182 [3/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:28:32.182 [4/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:28:32.182 [5/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:28:32.184 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:28:32.187 [1/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:28:32.189 [2/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:28:32.192 [3/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:28:32.195 [4/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:28:32.197 [5/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:28:32.254 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:28:32.257 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:28:37.857 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=appetizer
+23:28:37.860 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:28:49.621 [0/192.168.0.21] Received GET for: /pages/recipes.html?req=recipe_brief&category=all
+23:28:49.625 [0/192.168.0.21] Recipe brief request. Assembling JSON.
+23:39:55.644 [0/127.0.0.1] Unknown request:
+[NO DATA]
+23:43:47.993 [0/192.168.0.21] Received GET for: /pages/facts.html
+23:43:47.995 [0/192.168.0.21] File "/pages/facts.html" found. Sending content.
+23:43:47.091 [1/192.168.0.21] Received GET for: /res/css/960.css
+23:43:47.091 [0/192.168.0.21] Received GET for: /res/css/project.css
+23:43:47.092 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:43:47.094 [1/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:43:47.096 [0/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:43:47.099 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:43:47.100 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:43:47.101 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:43:47.111 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:43:47.115 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:43:47.252 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:43:47.255 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:43:48.334 [0/192.168.0.21] Received GET for: /pages/history.html
+23:43:48.336 [0/192.168.0.21] File "/pages/history.html" found. Sending content.
+23:43:48.448 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:43:48.448 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:43:48.449 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:43:48.449 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:43:48.450 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:43:48.451 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:43:48.454 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:43:48.457 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:43:48.460 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:43:48.463 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:43:49.604 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:43:49.607 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:43:49.184 [0/192.168.0.21] Received GET for: /pages/music.html
+23:43:49.187 [0/192.168.0.21] File "/pages/music.html" found. Sending content.
+23:43:49.282 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:43:49.285 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:43:49.287 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:43:49.287 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:43:49.287 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:43:49.292 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:43:49.292 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:43:49.294 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:43:49.296 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:43:49.303 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:43:49.463 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:43:49.466 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:43:52.305 [0/192.168.0.21] Received GET for: /pages/about.html
+23:43:52.308 [0/192.168.0.21] File "/pages/about.html" found. Sending content.
+23:43:54.656 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:43:54.658 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:43:54.659 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:43:54.660 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:43:54.662 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:43:54.662 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:43:54.662 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:43:54.667 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:43:54.672 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:43:54.674 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:43:54.850 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:43:54.853 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:43:57.962 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:43:57.965 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:43:57.057 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:43:57.058 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:43:57.059 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:43:57.061 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:43:57.061 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:43:57.061 [4/192.168.0.21] Received GET for: /res/js/recipes.js
+23:43:57.064 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:43:57.067 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:43:57.068 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:43:57.073 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:43:57.076 [4/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:43:57.081 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:43:57.085 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:43:57.095 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:43:57.231 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:43:57.232 [1/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:43:57.233 [2/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:43:57.233 [3/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:43:57.234 [4/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:43:57.235 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:43:57.236 [5/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:43:57.237 [1/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:43:57.239 [2/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:43:57.242 [3/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:43:57.244 [4/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:43:57.250 [5/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:43:57.312 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:43:57.315 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:49:40.361 [0/127.0.0.1] Received GET for: /index.html
+23:49:40.363 [0/127.0.0.1] File "/index.html" found. Sending content.
+23:49:40.477 [0/127.0.0.1] Received GET for: /res/css/960.css
+23:49:40.477 [1/127.0.0.1] Received GET for: /res/js/soyutils.js
+23:49:40.477 [2/127.0.0.1] Received GET for: /res/css/project.css
+23:49:40.478 [3/127.0.0.1] Received GET for: /res/js/templates.js
+23:49:40.478 [4/127.0.0.1] Received GET for: /res/js/jquery-1.10.2.js
+23:49:40.480 [0/127.0.0.1] File "/res/css/960.css" found. Sending content.
+23:49:40.483 [1/127.0.0.1] File "/res/js/soyutils.js" found. Sending content.
+23:49:40.486 [2/127.0.0.1] File "/res/css/project.css" found. Sending content.
+23:49:40.488 [3/127.0.0.1] File "/res/js/templates.js" found. Sending content.
+23:49:40.491 [4/127.0.0.1] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:49:41.584 [0/127.0.0.1] Received GET for: /res/images/header.jpg
+23:49:41.587 [0/127.0.0.1] File "/res/images/header.jpg" found. Sending content.
+23:49:41.623 [0/127.0.0.1] Received GET for: /favicon.ico
+23:49:41.626 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+23:49:41.630 [1/127.0.0.1] Received GET for: /favicon.ico
+23:49:41.633 [1/127.0.0.1] File "/favicon.ico" found. Sending content.
+23:49:47.998 [0/127.0.0.1] Unknown request:
+[NO DATA]
+23:49:58.659 [0/127.0.0.1] Unknown request:
+[NO DATA]
+23:50:00.877 [0/192.168.0.21] Received GET for: /index.html
+23:50:00.881 [0/192.168.0.21] File "/index.html" found. Sending content.
+23:50:00.129 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:50:00.132 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:02.370 [0/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:02.371 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:50:02.373 [0/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:02.375 [2/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:02.376 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:02.380 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:02.382 [2/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:02.388 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:02.534 [3/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:02.537 [3/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:09.358 [0/192.168.0.21] Received GET for: /pages/recipes.html
+23:50:09.361 [0/192.168.0.21] File "/pages/recipes.html" found. Sending content.
+23:50:09.475 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:50:09.479 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:09.480 [2/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:09.480 [1/192.168.0.21] Received GET for: /res/js/recipes.js
+23:50:09.480 [3/192.168.0.21] Received GET for: /res/css/project.css
+23:50:09.480 [4/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:09.481 [5/192.168.0.21] Received GET for: /res/js/recipesTemplates.js
+23:50:09.486 [2/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:09.489 [1/192.168.0.21] File "/res/js/recipes.js" found. Sending content.
+23:50:09.492 [3/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:09.495 [4/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:09.496 [6/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:09.499 [5/192.168.0.21] File "/res/js/recipesTemplates.js" found. Sending content.
+23:50:09.514 [6/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:10.636 [0/192.168.0.21] Received GET for: /res/images/penguins.jpg
+23:50:10.639 [1/192.168.0.21] Received GET for: /res/images/glintwein.jpg
+23:50:10.639 [2/192.168.0.21] Received GET for: /res/images/mashed_potato.jpg
+23:50:10.640 [3/192.168.0.21] Received GET for: /res/images/turkey.jpg
+23:50:10.640 [0/192.168.0.21] File "/res/images/penguins.jpg" found. Sending content.
+23:50:10.641 [4/192.168.0.21] Received GET for: /res/images/manyfood.jpg
+23:50:10.641 [5/192.168.0.21] Received GET for: /res/images/cookie.jpg
+23:50:10.643 [1/192.168.0.21] File "/res/images/glintwein.jpg" found. Sending content.
+23:50:10.646 [2/192.168.0.21] File "/res/images/mashed_potato.jpg" found. Sending content.
+23:50:10.649 [3/192.168.0.21] File "/res/images/turkey.jpg" found. Sending content.
+23:50:10.656 [4/192.168.0.21] File "/res/images/manyfood.jpg" found. Sending content.
+23:50:10.659 [5/192.168.0.21] File "/res/images/cookie.jpg" found. Sending content.
+23:50:10.699 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:10.702 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:11.153 [0/192.168.0.21] Received GET for: /pages/facts.html
+23:50:11.156 [0/192.168.0.21] File "/pages/facts.html" found. Sending content.
+23:50:11.263 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:50:11.264 [1/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:11.264 [2/192.168.0.21] Received GET for: /res/css/project.css
+23:50:11.267 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:11.268 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:11.270 [1/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:11.272 [2/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:11.274 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:11.277 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:11.287 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:11.425 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:11.429 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:12.337 [0/192.168.0.21] Received GET for: /pages/history.html
+23:50:12.340 [0/192.168.0.21] File "/pages/history.html" found. Sending content.
+23:50:12.438 [1/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:12.438 [0/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:12.438 [2/192.168.0.21] Received GET for: /res/css/960.css
+23:50:12.438 [3/192.168.0.21] Received GET for: /res/css/project.css
+23:50:12.439 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:12.441 [1/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:12.443 [0/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:12.446 [2/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:12.449 [3/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:12.451 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:13.589 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:13.592 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:32.920 [0/192.168.0.21] Received GET for: /index.html
+23:50:32.923 [0/192.168.0.21] File "/index.html" found. Sending content.
+23:50:32.058 [1/192.168.0.21] Received GET for: /res/css/960.css
+23:50:32.058 [4/192.168.0.21] Received GET for: /res/css/project.css
+23:50:32.059 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:32.060 [1/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:32.062 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:32.063 [4/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:32.064 [5/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:32.066 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:32.072 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:32.077 [5/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:32.254 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:32.257 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:34.784 [0/192.168.0.21] Received GET for: /pages/facts.html
+23:50:34.788 [0/192.168.0.21] File "/pages/facts.html" found. Sending content.
+23:50:34.895 [0/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:34.895 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:50:34.895 [2/192.168.0.21] Received GET for: /res/css/960.css
+23:50:34.895 [3/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:34.898 [0/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:34.900 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:34.902 [2/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:34.905 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:34.905 [3/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:34.917 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:34.048 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:34.051 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:35.088 [0/192.168.0.21] Received GET for: /pages/history.html
+23:50:35.091 [0/192.168.0.21] File "/pages/history.html" found. Sending content.
+23:50:35.201 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:50:35.202 [3/192.168.0.21] Received GET for: /res/css/project.css
+23:50:35.202 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:35.202 [1/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:35.202 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:35.205 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:35.207 [3/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:35.209 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:35.213 [1/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:35.215 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:35.365 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:35.368 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:36.340 [0/192.168.0.21] Received GET for: /index.html
+23:50:36.346 [0/192.168.0.21] File "/index.html" found. Sending content.
+23:50:36.513 [1/192.168.0.21] Received GET for: /res/css/960.css
+ss
+23:50:36.514 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+
+23:50:36.514 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:36.520 [0/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:36.526 [1/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:36.532 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:36.538 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:36.544 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:37.722 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:37.728 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:56.303 [0/192.168.0.21] Received GET for: /index.html
+23:50:56.309 [0/192.168.0.21] File "/index.html" found. Sending content.
+23:50:56.403 [0/192.168.0.21] Received GET for: /res/css/project.css
+23:50:56.403 [1/192.168.0.21] Received GET for: /res/css/960.css
+23:50:56.403 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:50:56.404 [3/192.168.0.21] Received GET for: /res/js/templates.js
+23:50:56.404 [4/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:50:56.409 [0/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:50:56.413 [1/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:50:56.419 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:50:56.426 [3/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:50:56.433 [4/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:50:57.651 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:50:57.657 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:50:57.749 [0/192.168.0.21] Received GET for: /favicon.ico
+23:50:57.754 [0/192.168.0.21] File "/favicon.ico" found. Sending content.
+23:50:57.769 [0/192.168.0.21] Received GET for: /favicon.ico
+23:50:57.775 [0/192.168.0.21] File "/favicon.ico" found. Sending content.
+23:51:48.719 [0/192.168.0.21] Received GET for: /pages/facts.html
+23:51:48.725 [0/192.168.0.21] File "/pages/facts.html" found. Sending content.
+23:51:48.765 [0/192.168.0.21] Received GET for: /res/css/960.css
+23:51:48.766 [2/192.168.0.21] Received GET for: /res/js/soyutils.js
+23:51:48.767 [1/192.168.0.21] Received GET for: /res/css/project.css
+23:51:48.767 [3/192.168.0.21] Received GET for: /res/js/jquery-1.10.2.js
+23:51:48.767 [4/192.168.0.21] Received GET for: /res/js/templates.js
+23:51:48.773 [0/192.168.0.21] File "/res/css/960.css" found. Sending content.
+23:51:48.780 [2/192.168.0.21] File "/res/js/soyutils.js" found. Sending content.
+23:51:48.787 [1/192.168.0.21] File "/res/css/project.css" found. Sending content.
+23:51:48.793 [3/192.168.0.21] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:51:48.800 [4/192.168.0.21] File "/res/js/templates.js" found. Sending content.
+23:51:48.924 [0/192.168.0.21] Received GET for: /res/images/header.jpg
+23:51:48.931 [0/192.168.0.21] File "/res/images/header.jpg" found. Sending content.
+23:51:48.982 [0/192.168.0.21] Received GET for: /favicon.ico
+23:51:48.989 [0/192.168.0.21] File "/favicon.ico" found. Sending content.
+23:51:48.007 [0/192.168.0.21] Received GET for: /favicon.ico
+23:51:48.012 [0/192.168.0.21] File "/favicon.ico" found. Sending content.
+23:58:33.152 [0/127.0.0.1] Received GET for: /index.html
+23:58:33.157 [0/127.0.0.1] File "/index.html" found. Sending content.
+23:58:33.215 [0/127.0.0.1] Received GET for: /res/css/960.css
+23:58:33.216 [1/127.0.0.1] Received GET for: /res/css/project.css
+23:58:33.216 [2/127.0.0.1] Received GET for: /res/js/soyutils.js
+23:58:33.217 [3/127.0.0.1] Received GET for: /res/js/templates.js
+23:58:33.217 [4/127.0.0.1] Received GET for: /res/js/jquery-1.10.2.js
+23:58:33.223 [0/127.0.0.1] File "/res/css/960.css" found. Sending content.
+23:58:33.229 [1/127.0.0.1] File "/res/css/project.css" found. Sending content.
+23:58:33.236 [2/127.0.0.1] File "/res/js/soyutils.js" found. Sending content.
+23:58:33.242 [3/127.0.0.1] File "/res/js/templates.js" found. Sending content.
+23:58:33.249 [4/127.0.0.1] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:58:33.355 [0/127.0.0.1] Received GET for: /res/images/header.jpg
+23:58:33.361 [0/127.0.0.1] File "/res/images/header.jpg" found. Sending content.
+23:58:33.401 [0/127.0.0.1] Received GET for: /favicon.ico
+23:58:33.408 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+23:58:33.421 [1/127.0.0.1] Received GET for: /favicon.ico
+23:58:33.426 [1/127.0.0.1] File "/favicon.ico" found. Sending content.
+23:59:38.076 [0/127.0.0.1] Received GET for: /index.html
+23:59:38.080 [0/127.0.0.1] File "/index.html" found. Sending content.
+23:59:38.126 [0/127.0.0.1] Received GET for: /res/css/960.css
+23:59:38.127 [1/127.0.0.1] Received GET for: /res/css/project.css
+23:59:38.128 [2/127.0.0.1] Received GET for: /res/js/soyutils.js
+23:59:38.130 [4/127.0.0.1] Received GET for: /res/js/jquery-1.10.2.js
+23:59:38.129 [3/127.0.0.1] Received GET for: /res/js/templates.js
+23:59:38.134 [0/127.0.0.1] File "/res/css/960.css" found. Sending content.
+23:59:38.138 [1/127.0.0.1] File "/res/css/project.css" found. Sending content.
+23:59:38.144 [2/127.0.0.1] File "/res/js/soyutils.js" found. Sending content.
+23:59:38.149 [4/127.0.0.1] File "/res/js/jquery-1.10.2.js" found. Sending content.
+23:59:38.155 [3/127.0.0.1] File "/res/js/templates.js" found. Sending content.
+23:59:38.265 [5/127.0.0.1] Received GET for: /res/images/header.jpg
+23:59:38.271 [5/127.0.0.1] File "/res/images/header.jpg" found. Sending content.
+23:59:38.307 [0/127.0.0.1] Received GET for: /favicon.ico
+23:59:38.311 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+23:59:38.328 [1/127.0.0.1] Received GET for: /favicon.ico
+23:59:38.334 [1/127.0.0.1] File "/favicon.ico" found. Sending content.
+00:02:21.015 [0/127.0.0.1] Received GET for: /index.html
+00:02:21.017 [0/127.0.0.1] File "/index.html" found. Sending content.
+00:02:21.097 [0/127.0.0.1] Received GET for: /res/css/960.css
+00:02:21.097 [1/127.0.0.1] Received GET for: /res/js/soyutils.js
+00:02:21.097 [2/127.0.0.1] Received GET for: /res/css/project.css
+00:02:21.098 [4/127.0.0.1] Received GET for: /res/js/templates.js
+00:02:21.098 [3/127.0.0.1] Received GET for: /res/js/jquery-1.10.2.js
+00:02:21.099 [5/127.0.0.1] Received GET for: /favicon.ico
+00:02:21.100 [0/127.0.0.1] File "/res/css/960.css" found. Sending content.
+00:02:21.104 [1/127.0.0.1] File "/res/js/soyutils.js" found. Sending content.
+00:02:21.106 [2/127.0.0.1] File "/res/css/project.css" found. Sending content.
+00:02:21.109 [4/127.0.0.1] File "/res/js/templates.js" found. Sending content.
+00:02:21.111 [3/127.0.0.1] File "/res/js/jquery-1.10.2.js" found. Sending content.
+00:02:21.113 [5/127.0.0.1] File "/favicon.ico" found. Sending content.
+00:02:21.162 [0/127.0.0.1] Received GET for: /favicon.ico
+00:02:21.165 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+00:02:21.237 [0/127.0.0.1] Received GET for: /favicon.ico
+00:02:21.239 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+00:02:21.265 [0/127.0.0.1] Received GET for: /favicon.ico
+00:02:21.265 [1/127.0.0.1] Received GET for: /res/images/header.jpg
+00:02:21.268 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+00:02:21.270 [1/127.0.0.1] File "/res/images/header.jpg" found. Sending content.
+00:02:28.188 [0/127.0.0.1] Unknown request:
+[NO DATA]
+00:02:43.419 [0/127.0.0.1] Unknown request:
+[NO DATA]
+00:03:00.110 [0/127.0.0.1] Received GET for: /index.html
+00:03:00.113 [0/127.0.0.1] File "/index.html" found. Sending content.
+00:03:00.461 [1/127.0.0.1] Received GET for: /res/css/960.css
+00:03:00.465 [1/127.0.0.1] File "/res/css/960.css" found. Sending content.
+00:03:01.761 [0/127.0.0.1] Received GET for: /res/css/project.css
+00:03:01.763 [1/127.0.0.1] Received GET for: /res/js/soyutils.js
+00:03:01.763 [2/127.0.0.1] Received GET for: /res/js/templates.js
+00:03:01.764 [3/127.0.0.1] Received GET for: /res/js/jquery-1.10.2.js
+00:03:01.764 [0/127.0.0.1] File "/res/css/project.css" found. Sending content.
+00:03:01.767 [1/127.0.0.1] File "/res/js/soyutils.js" found. Sending content.
+00:03:01.770 [2/127.0.0.1] File "/res/js/templates.js" found. Sending content.
+00:03:01.774 [3/127.0.0.1] File "/res/js/jquery-1.10.2.js" found. Sending content.
+00:03:01.304 [0/127.0.0.1] Received GET for: /res/images/header.jpg
+00:03:01.307 [0/127.0.0.1] File "/res/images/header.jpg" found. Sending content.
+00:03:02.553 [0/127.0.0.1] Received GET for: /favicon.ico
+00:03:02.556 [0/127.0.0.1] File "/favicon.ico" found. Sending content.
+00:03:14.043 [0/127.0.0.1] Unknown request:
+[NO DATA]
