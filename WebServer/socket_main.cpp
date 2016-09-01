@@ -3,6 +3,8 @@
 #include "socket.h"
 #include "util.h"
 #include "ejb.h"
+#include <locale>
+#include <codecvt>
 
 using namespace std;
 
@@ -43,9 +45,31 @@ void cSocketMain::sendPage(string url, SOCKET* client, int threadId, string ip)
 	file.close();
 }
 
+wstring s2ws(const std::string& str)
+{
+	using convert_typeX = std::codecvt_utf8<wchar_t>;
+	std::wstring_convert<convert_typeX, wchar_t> converterX;
+
+	return converterX.from_bytes(str);
+}
+
+string ws2s(const std::wstring& wstr)
+{
+	using convert_typeX = std::codecvt_utf8<wchar_t>;
+	std::wstring_convert<convert_typeX, wchar_t> converterX;
+
+	return converterX.to_bytes(wstr);
+}
+
 void cSocketMain::sendData(string data, SOCKET* client)
 {
 	send(*client, data.c_str(), data.length(), 0);
+}
+
+void cSocketMain::sendDataToJS(wstring data, SOCKET* client)
+{
+	string regular = ws2s(data);
+	sendData(regular, client);
 }
 
 void cSocketMain::sendError(int code, SOCKET* client)

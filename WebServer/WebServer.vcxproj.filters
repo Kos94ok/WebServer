@@ -31,6 +31,18 @@
     <Filter Include="Файлы исходного кода\Thread">
       <UniqueIdentifier>{bb9e74b0-e1bf-4873-bee1-3e3b9fcf05e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы исходного кода\RPG">
+      <UniqueIdentifier>{5299812b-7863-4379-afba-5578c2334d04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\RPG\Locations">
+      <UniqueIdentifier>{b96c9fd8-b28e-42ed-931a-1690441aad77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\RPG\Core">
+      <UniqueIdentifier>{198f981b-a5d3-4aee-a6b9-6ec4fb3b16dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\RPG\Network">
+      <UniqueIdentifier>{ae68ba20-eba9-46c5-83ab-e3aa4a7ffd54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -54,6 +66,21 @@
     <ClInclude Include="thread.h">
       <Filter>Файлы исходного кода\Thread</Filter>
     </ClInclude>
+    <ClInclude Include="rpg_core.h">
+      <Filter>Файлы исходного кода\RPG\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_client.h">
+      <Filter>Файлы исходного кода\RPG\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg.h">
+      <Filter>Файлы исходного кода\RPG\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_location.h">
+      <Filter>Файлы исходного кода\RPG\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_network.h">
+      <Filter>Файлы исходного кода\RPG\Network</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,6 +100,12 @@
     </ClCompile>
     <ClCompile Include="thread_main.cpp">
       <Filter>Файлы исходного кода\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="rpg_main.cpp">
+      <Filter>Файлы исходного кода\RPG</Filter>
+    </ClCompile>
+    <ClCompile Include="rpg_location.cpp">
+      <Filter>Файлы исходного кода\RPG\Locations</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

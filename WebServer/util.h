@@ -24,6 +24,7 @@ public:
 	std::string decodeString(std::string str);
 	std::string getTimeStr();
 	void cout(std::string str, int level = 8, std::string prefix = "", int threadId = -1);
+	int parseArguments(std::string args, std::string* key, std::string* value);
 
 	std::mutex coutAccess;
 

@@ -4,6 +4,7 @@
 #include "socket.h"
 #include "ejb.h"
 #include "thread.h"
+#include "rpg.h"
 
 void parseConsoleCommand(std::string cmd)
 {
@@ -35,6 +36,7 @@ void fileConsole()
 
 int main(int argc, char* argv[])
 {
+	setlocale(LC_ALL, "");
 	std::vector<std::thread> threadPool;
 
 	util.settings.load();
@@ -63,6 +65,9 @@ int main(int argc, char* argv[])
 		getchar();
 		return 0;
 	}
+
+	// Initialize RPG
+	rpg.Initialization();
 
 	// Initialize sockets
 	WSADATA wsaData;

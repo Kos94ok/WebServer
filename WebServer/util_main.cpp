@@ -120,6 +120,33 @@ void cUtilMain::cout(string str, int level, string prefix, int threadId)
 	coutAccess.unlock();
 }
 
+int cUtilMain::parseArguments(std::string args, std::string* key, std::string* value)
+{
+	using namespace std;
+
+	int found = 0;
+	while (true)
+	{
+		key[found] = args.substr(0, args.find("="));
+		if (args.find("&") != string::npos) {
+			if (args.find("&") != args.find("=") + 1) {
+				value[found] = args.substr(args.find("=") + 1, args.find("&") - args.find("=") - 1);
+			}
+			else {
+				value[found] = "";
+			}
+			args.erase(0, args.find("&") + 1);
+			found += 1;
+		}
+		else {
+			value[found] = args.substr(args.find("=") + 1);
+			found += 1;
+			break;
+		}
+	}
+	return found;
+}
+
 void cSettings::load()
 {
 	string val = getEntry("enableLog");

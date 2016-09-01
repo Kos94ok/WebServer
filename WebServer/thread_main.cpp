@@ -4,35 +4,9 @@
 #include "util.h"
 #include "socket.h"
 #include "ejb.h"
+#include "rpg.h"
 
 std::vector<cThreadData> threadData;
-
-int parseArguments(std::string args, std::string* key, std::string* value)
-{
-	using namespace std;
-
-	int found = 0;
-	while (true)
-	{
-		key[found] = args.substr(0, args.find("="));
-		if (args.find("&") != string::npos) {
-			if (args.find("&") != args.find("=") + 1) {
-				value[found] = args.substr(args.find("=") + 1, args.find("&") - args.find("=") - 1);
-			}
-			else {
-				value[found] = "";
-			}
-			args.erase(0, args.find("&") + 1);
-			found += 1;
-		}
-		else {
-			value[found] = args.substr(args.find("=") + 1);
-			found += 1;
-			break;
-		}
-	}
-	return found;
-}
 
 void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 {
@@ -57,7 +31,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 				url = url.substr(0, url.find("?"));
 				string key[8];
 				string value[8];
-				int found = parseArguments(args, key, value);
+				int found = util.parseArguments(args, key, value);
 
 				// Recipe data request
 				if (args.find("req=recipe_brief") != string::npos) {
@@ -167,7 +141,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 			string args = req.substr(req.find_last_of('\n') + 1);
 			string key[8];
 			string value[8];
-			int found = parseArguments(args, key, value);
+			int found = util.parseArguments(args, key, value);
 
 			if (url == "/pages/recipes_new.html") {
 				string strID = ejb.from("/res/db/main.db", "id");
@@ -185,17 +159,27 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 			sock.sendPage(url, &client, threadId, inet_ntoa(client_info.sin_addr));
 		}
 		// Proxy request
-		else if (url.substr(0, 7) == "http://") {
+		else if (url.substr(0, 7) == "http://")
+		{
 			util.cout("Denying POST proxy request to \"" + url + "\"", 9, inet_ntoa(client_info.sin_addr), threadId);
 			sock.sendError(1000, &client);
 		}
 	}
+	// RPG
+	else if (req.substr(0, 3) == "RPG")
+	{
+		string url = req.substr(4, req.find(" ", 4) - 4);
+		// Regular request
+		util.cout("Received RPG for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
+		rpg.ParseRequest(req, &client);
+	}
 	// Unknown request
-	else {
+	else
+	{
 		if (req.length() == 0 || req == " ") { req = "[NO DATA]"; }
 		util.cout("Unknown request:\n" + req, 9, inet_ntoa(client_info.sin_addr), threadId);
 
-		sock.sendData("hi", &client);
+		//sock.sendData("hi", &client);
 	}
 	shutdown(client, SD_SEND);
 	threadData[threadId].state = THREAD_DOWN;
