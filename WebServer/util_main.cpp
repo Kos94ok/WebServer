@@ -1,7 +1,9 @@
 
 #include "stdafx.h"
 #include "util.h"
-#include "ejb.h"
+#include <cstdio>
+#include <memory>
+#include <stdexcept>
 
 using namespace std;
 
@@ -145,6 +147,29 @@ int cUtilMain::parseArguments(std::string args, std::string* key, std::string* v
 		}
 	}
 	return found;
+}
+
+string cUtilMain::getArgumentValue(std::string target, std::string* key, std::string* value, int count)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (key[i] == target)
+			return value[i];
+	}
+	return "";
+}
+
+string cUtilMain::executeSystemCall(string cmd)
+{
+	char buffer[4096];
+	std::string result = "";
+	std::shared_ptr<FILE> pipe(_popen(cmd.c_str(), "r"), _pclose);
+	if (!pipe) throw std::runtime_error("popen() failed!");
+	while (!feof(pipe.get())) {
+		if (fgets(buffer, 128, pipe.get()) != NULL)
+			result += buffer;
+	}
+	return result;
 }
 
 void cSettings::load()

@@ -3,7 +3,8 @@
 #include "util.h"
 #include "socket.h"
 #include "thread.h"
-#include "rpg.h"
+#include "client.h"
+#include "json.h"
 
 void parseConsoleCommand(std::string cmd)
 {
@@ -64,6 +65,12 @@ int main(int argc, char* argv[])
 		getchar();
 		return 0;
 	}
+
+	Client.SeedData();
+
+	// Test
+	util.cout("Json: " + Json.Assemble_DishHistory("TestSessionKey"));
+	// Stop test
 
 	// Initialize sockets
 	WSADATA wsaData;

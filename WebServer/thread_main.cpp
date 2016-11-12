@@ -3,8 +3,8 @@
 #include "thread.h"
 #include "util.h"
 #include "socket.h"
-#include "ejb.h"
-#include "rpg.h"
+#include "json.h"
+#include "client.h"
 
 std::vector<cThreadData> threadData;
 
@@ -23,17 +23,19 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 		if (url == "/") { url = "/index.html"; }
 		util.cout("Received GET for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
 
-		// Normal request
-		if (url.substr(0, 1) == "/")
+		int found;
+		string key[8], value[8];
+		// Parse arguments
+		if (url.find("?") != string::npos)
 		{
-			if (url.find("?") != string::npos) {
-				string args = url.substr(url.find("?") + 1);
-				url = url.substr(0, url.find("?"));
-				string key[8];
-				string value[8];
-				int found = util.parseArguments(args, key, value);
+			string args = url.substr(url.find("?") + 1);
+			url = url.substr(0, url.find("?"));
+			found = util.parseArguments(args, key, value);
+		}
 
-				// Recipe data request
+		// Normal request
+		if (url.substr(0, 1) == "/" && url.find(".") != string::npos)
+		{
 				/*if (args.find("req=recipe_brief") != string::npos) {
 					util.cout("Recipe brief request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
 
@@ -114,9 +116,43 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 
 					sock.sendData(json, &client);
 				}*/
-			}
-			else {
+
 				sock.sendPage(url, &client, threadId, inet_ntoa(client_info.sin_addr));
+		}
+		// Special request
+		else if (url.substr(0, 1) == "/")
+		{
+			// Login
+			if (url == "/login")
+			{
+				// Return codes:
+				// 0 - success
+				// 1 - generic error
+				// 2 - argument error
+				// 3 - incorrect user credentials
+				string Username = util.getArgumentValue("username", key, value, found);
+				string Password = util.getArgumentValue("password", key, value, found);
+				if (Username == "" || Password == "")
+				{
+					// No arguments found
+					sock.sendData("2 [Argument error]", &client);
+				}
+				else
+				{
+					int returnCode = Client.Login(Username, Password);
+					string returnData;
+					if (returnCode == 0)
+						returnData = "0 TestSessionKey";
+
+					sock.sendData(returnData, &client);
+				}
+			}
+			// Dish history
+			else if (url == "/history")
+			{
+				string SessionKey = util.getArgumentValue("sessionKey", key, value, found);
+				string returnData = Json.Assemble_DishHistory(SessionKey);
+				sock.sendData(returnData, &client);
 			}
 		}
 		// Proxy request

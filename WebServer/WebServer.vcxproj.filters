@@ -28,6 +28,12 @@
     <Filter Include="Файлы исходного кода\Thread">
       <UniqueIdentifier>{bb9e74b0-e1bf-4873-bee1-3e3b9fcf05e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы исходного кода\Client">
+      <UniqueIdentifier>{31ba9a7a-3c4d-400b-962b-38827c9d9bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\JSON">
+      <UniqueIdentifier>{a72a170c-f85d-4ef6-bb0d-ea8292ec7724}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -48,6 +54,12 @@
     <ClInclude Include="thread.h">
       <Filter>Файлы исходного кода\Thread</Filter>
     </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>Файлы исходного кода\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="json.h">
+      <Filter>Файлы исходного кода\JSON</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,6 +76,15 @@
     </ClCompile>
     <ClCompile Include="thread_main.cpp">
       <Filter>Файлы исходного кода\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="client_main.cpp">
+      <Filter>Файлы исходного кода\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="dish_main.cpp">
+      <Filter>Файлы исходного кода\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="json_main.cpp">
+      <Filter>Файлы исходного кода\JSON</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

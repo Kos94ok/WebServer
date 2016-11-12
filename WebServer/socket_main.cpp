@@ -52,6 +52,7 @@ string ws2s(const std::wstring& wstr)
 
 void cSocketMain::sendData(string data, SOCKET* client)
 {
+	data = "HTTP/1.1 200 OK\nAccess-Control-Allow-Origin: *\n\n" + data;
 	send(*client, data.c_str(), data.length(), 0);
 }
 
