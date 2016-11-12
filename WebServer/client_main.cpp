@@ -37,7 +37,7 @@ std::vector<cDish> cClientMain::GetUserDishHistory(std::string sessionKey)
 
 void cClientMain::SeedData()
 {
-	TestUserDishHistory.push_back(cDish(1));
-	TestUserDishHistory.push_back(cDish(2));
-	TestUserDishHistory.push_back(cDish(5));
+	TestUserDishHistory.push_back(cDish(1, "08.11.2016"));
+	TestUserDishHistory.push_back(cDish(2, "09.11.2016"));
+	TestUserDishHistory.push_back(cDish(5, "10.11.2016"));
 }

@@ -19,6 +19,9 @@ std::string cJsonMain::Assemble_DishHistory(std::string sessionKey)
 		// Id
 		json += "\"id\":";
 		json += "\"" + std::to_string(DishHistory[i].Id) + "\"";
+		// Date
+		json += ",\"date\":";
+		json += "\"" + DishHistory[i].Date + "\"";
 		// Data
 		json += ",\"data\":";
 		json += "" + DishHistory[i].Data + "";

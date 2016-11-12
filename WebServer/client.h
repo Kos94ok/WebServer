@@ -9,9 +9,11 @@ public:
 	int Id;
 	std::string Name;
 	std::string Url;
+	std::string Date;
+
 	std::string Data;
 
-	cDish(int Id);
+	cDish(int Id, std::string Date);
 };
 
 class cClientMain

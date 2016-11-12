@@ -1,26 +1,6 @@
 Hi, I'm a log.
-18:34:20.140 Index found at "../Production/Server/index.html"
-18:34:20.514 Json: [{"id":"1","data":[{"id":"1","dispname":"Broiler file","energy":"110","protein":"23","fat":"2","carbon":"1","L":"0","G":"0","M":"0","VL":"0","V":"0","status":null,"allergy":null,"origin":"Kauhava"}]},{"id":"2","data":[{"id":"2","dispname":"Risotto Verde","energy":"142","protein":"3","fat":"7","carbon":"16","L":"1","G":"1","M":"0","VL":"1","V":"1","status":null,"allergy":"Nuts","origin":"Livorno"}]},{"id":"5","data":[{"id":"5","dispname":"Paella","energy":"101","protein":"7","fat":"3","carbon":"12","L":"0","G":"1","M":"0","VL":"0","V":"0","status":null,"allergy":"Shrimp","origin":"Valencia"}]}]
-18:34:20.524 Listening at port 80...
-18:39:51.945 [0/10.190.71.62] Received GET for: /history
-18:40:06.220 [0/10.190.71.62] Received GET for: /history
-18:40:19.436 [0/10.190.71.62] Received GET for: /history
-18:41:07.551 [0/10.190.71.62] Received GET for: /history
-18:41:16.747 [0/10.190.71.62] Received GET for: /history
-18:41:36.307 [0/10.190.71.62] Received GET for: /history
-18:42:25.682 [0/10.190.71.62] Received GET for: /history
-18:42:36.301 [0/10.190.71.62] Received GET for: /history
-18:42:48.859 [0/10.190.71.62] Received GET for: /history
-18:43:24.401 [1/10.190.71.62] Received GET for: /history
-18:44:17.751 [0/10.190.71.62] Received GET for: /history
-18:44:49.484 [0/10.190.71.62] Received GET for: /history
-18:44:54.466 [1/10.190.71.62] Unknown request:
-[NO DATA]
-18:45:38.310 [0/10.190.71.62] Received GET for: /history
-18:45:44.449 [1/10.190.71.62] Unknown request:
-[NO DATA]
-18:46:38.732 [0/10.190.71.62] Received GET for: /history
-18:50:47.338 [0/10.190.71.62] Received GET for: /history
-18:50:52.365 [0/10.190.71.62] Received GET for: /history
-18:51:13.502 [0/10.190.71.62] Received GET for: /history
-18:51:55.595 [0/10.190.71.62] Received GET for: /history
+20:02:28.859 Index found at "Server/index.html"
+20:02:29.399 Json: [{"id":"1","date":"08.11.2016","data":[{"id":"1","dispname":"Broiler file","energy":"110","protein":"23","fat":"2","carbon":"1","L":"0","G":"0","M":"0","VL":"0","V":"0","status":null,"allergy":null,"origin":"Kauhava"}]},{"id":"2","date":"09.11.2016","data":[{"id":"2","dispname":"Risotto Verde","energy":"142","protein":"3","fat":"7","carbon":"16","L":"1","G":"1","M":"0","VL":"1","V":"1","status":null,"allergy":"Nuts","origin":"Livorno"}]},{"id":"5","date":"10.11.2016","data":[{"id":"5","dispname":"Paella","energy":"101","protein":"7","fat":"3","carbon":"12","L":"0","G":"1","M":"0","VL":"0","V":"0","status":null,"allergy":"Shrimp","origin":"Valencia"}]}]
+20:02:29.411 Listening at port 80...
+20:02:32.835 [0/10.190.71.62] Received GET for: /history
+20:02:46.688 [0/10.190.71.62] Received GET for: /history
