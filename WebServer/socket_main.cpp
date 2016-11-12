@@ -24,16 +24,6 @@ void cSocketMain::sendPage(string url, SOCKET* client, int threadId, string ip)
 		oss << "HTTP/1.1 200 OK\n\n";
 		oss << file.rdbuf();
 		strbuf = oss.str();
-		// Parsing EJB script
-		if (url.length() > 5 && url.substr(url.length() - 5, 5) == ".html")
-		{
-			for (int i = 0; i < (int)strbuf.length() - 5; i++) {
-				if (strbuf.substr(i, 5) == "<ejb>") {
-					string scr = strbuf.substr(i + 5, strbuf.find("</ejb>") - i - 5);
-					strbuf.replace(i, strbuf.find("</ejb>") - i + 6, ejb.parse(scr));
-				}
-			}
-		}
 		// Send the packet
 		send(*client, strbuf.c_str(), strbuf.length(), 0);
 	}

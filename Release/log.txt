@@ -1,97 +1,11 @@
 Hi, I'm a log.
-00:50:09.712 Index found at "../Production/Server/index.html"
-00:50:09.719 Listening at port 8081...
-00:50:10.490 [0/127.0.0.1] Received GET for: /game.html
-00:50:10.493 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:50:10.543 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:50:10.545 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:50:10.549 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:50:10.552 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:50:12.248 [0/127.0.0.1] Received GET for: /game.html
-00:50:12.252 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:50:12.375 [1/127.0.0.1] Received GET for: /CSS/style.css
-00:50:12.376 [2/127.0.0.1] Received GET for: /Scripts/core.js
-00:50:12.379 [1/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:50:12.382 [2/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:50:52.013 [0/127.0.0.1] Received GET for: /game.html
-00:50:52.017 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:50:52.063 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:50:52.064 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:50:52.067 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:50:52.070 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:51:26.518 [0/127.0.0.1] Received GET for: /game.html
-00:51:26.521 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:51:26.567 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:51:26.567 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:51:26.571 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:51:26.574 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:52:35.808 [0/127.0.0.1] Received GET for: /game.html
-00:52:35.812 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:52:35.860 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:52:35.860 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:52:35.864 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:52:35.868 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:52:35.985 [0/127.0.0.1] Received RPG for: /game.html
-00:53:01.227 [0/127.0.0.1] Received GET for: /game.html
-00:53:01.231 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:53:01.276 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:53:01.277 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:53:01.280 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:53:01.284 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:53:01.384 [0/127.0.0.1] Received RPG for: /game.html
-00:56:58.390 [0/127.0.0.1] Received GET for: /game.html
-00:56:58.394 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:56:58.469 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:56:58.478 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:56:59.965 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:56:59.969 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:56:59.043 [0/127.0.0.1] Received RPG for: /game.html
-00:57:17.149 [0/127.0.0.1] Received GET for: /game.html
-00:57:17.153 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:57:17.228 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:57:17.230 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:57:17.237 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:57:17.241 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:57:17.389 [2/127.0.0.1] Received RPG for: /game.html
-00:58:06.537 [0/127.0.0.1] Received GET for: /game.html
-00:58:06.541 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:58:07.601 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:58:07.605 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:58:07.664 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:58:07.669 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:58:07.785 [0/127.0.0.1] Received RPG for: /game.html
-00:58:21.216 [0/127.0.0.1] Received GET for: /game.html
-00:58:21.220 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:58:21.276 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:58:21.283 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:58:21.336 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:58:21.340 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:58:21.441 [0/127.0.0.1] Received RPG for: /game.html
-00:58:34.646 [0/127.0.0.1] Received GET for: /game.html
-00:58:34.650 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:58:34.700 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:58:34.701 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:58:34.706 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:58:34.709 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:58:34.811 [0/127.0.0.1] Received RPG for: /game.html
-00:58:39.902 [0/127.0.0.1] Received RPG for: /game.html
-00:58:41.354 [0/127.0.0.1] Received RPG for: /game.html
-00:58:43.718 [0/127.0.0.1] Received RPG for: /game.html
-00:58:44.034 [0/127.0.0.1] Received RPG for: /game.html
-00:58:50.857 [0/127.0.0.1] Received RPG for: /game.html
-00:58:52.242 [0/127.0.0.1] Received RPG for: /game.html
-00:58:54.637 [0/127.0.0.1] Received RPG for: /game.html
-00:58:54.354 [0/127.0.0.1] Received RPG for: /game.html
-00:59:09.159 [0/127.0.0.1] Received GET for: /game.html
-00:59:09.163 [0/127.0.0.1] File "/game.html" found. Sending content.
-00:59:09.214 [0/127.0.0.1] Received GET for: /CSS/style.css
-00:59:09.215 [1/127.0.0.1] Received GET for: /Scripts/core.js
-00:59:09.218 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
-00:59:09.222 [1/127.0.0.1] File "/Scripts/core.js" found. Sending content.
-00:59:09.328 [0/127.0.0.1] Received RPG for: /game.html
-00:59:10.312 [0/127.0.0.1] Received RPG for: /game.html
-00:59:14.962 [0/127.0.0.1] Received RPG for: /game.html
-00:59:16.625 [0/127.0.0.1] Received RPG for: /game.html
-00:59:29.641 [0/127.0.0.1] Received RPG for: /game.html
-00:59:38.930 [0/127.0.0.1] Received RPG for: /game.html
-00:59:42.664 [0/127.0.0.1] Received RPG for: /game.html
+15:32:56.578 Index found at "../Production/Server/index.html"
+15:32:56.587 Listening at port 8081...
+15:33:13.482 [0/127.0.0.1] Received GET for: /index.html
+15:33:13.489 [0/127.0.0.1] File "/index.html" found. Sending content.
+15:33:13.533 [0/127.0.0.1] Received GET for: /CSS/style.css
+15:33:13.592 [0/127.0.0.1] File "/CSS/style.css" found. Sending content.
+15:33:13.670 [0/127.0.0.1] Received GET for: /favicon.ico
+15:33:13.677 [0/127.0.0.1] File "/favicon.ico" not found. Sending 404.
+15:33:13.753 [0/127.0.0.1] Received GET for: /favicon.ico
+15:33:13.760 [0/127.0.0.1] File "/favicon.ico" not found. Sending 404.

@@ -66,9 +66,6 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	// Initialize RPG
-	rpg.Initialization();
-
 	// Initialize sockets
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
