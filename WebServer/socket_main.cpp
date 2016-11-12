@@ -2,7 +2,6 @@
 #include "stdafx.h"
 #include "socket.h"
 #include "util.h"
-#include "ejb.h"
 #include <locale>
 #include <codecvt>
 

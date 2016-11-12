@@ -59,3 +59,5 @@ ipch/webserver-1fb5ac3a/webserver-b1bf6b1b.ipch
 WebServer/Release/WebServer.Build.CppClean.log
 *.ipch
 WebServer/Release/WebServer.Build.CppClean.log
+*.db
+WebServer.VC.VC.opendb

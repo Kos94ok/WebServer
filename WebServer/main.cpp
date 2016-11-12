@@ -2,7 +2,6 @@
 #include "stdafx.h"
 #include "util.h"
 #include "socket.h"
-#include "ejb.h"
 #include "thread.h"
 #include "rpg.h"
 

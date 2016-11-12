@@ -34,7 +34,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 				int found = util.parseArguments(args, key, value);
 
 				// Recipe data request
-				if (args.find("req=recipe_brief") != string::npos) {
+				/*if (args.find("req=recipe_brief") != string::npos) {
 					util.cout("Recipe brief request. Assembling JSON.", 6, inet_ntoa(client_info.sin_addr), threadId);
 
 					string json, miniJson;
@@ -96,7 +96,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 								+ "\",\"recipe\":\"" + ejb.from("/res/db/recipes/recipe.db", id)
 								+ "\",\"image\":\"" + ejb.from("/res/db/recipes/image.db", id) + "\"}";
 						}
-					}*/
+					}
 					json += "}";
 					sock.sendData(json, &client);
 				}
@@ -113,7 +113,7 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 					json = "{\"recipe\":\"" + ejb.from("/res/db/recipes/recipe.db", id) + "\"}";
 
 					sock.sendData(json, &client);
-				}
+				}*/
 			}
 			else {
 				sock.sendPage(url, &client, threadId, inet_ntoa(client_info.sin_addr));
@@ -143,19 +143,6 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 			string value[8];
 			int found = util.parseArguments(args, key, value);
 
-			if (url == "/pages/recipes_new.html") {
-				string strID = ejb.from("/res/db/main.db", "id");
-				int id;
-				stringstream(strID) >> id;
-				util.cout("Pushing new data with id", 7, inet_ntoa(client_info.sin_addr), threadId);
-
-				for (int i = 0; i < found; i++) {
-					ejb.push("/res/db/recipes/" + key[i] + ".db", "id" + to_string(id), util.decodeString(value[i]));
-				}
-
-				ejb.push("/res/db/main.db", "id", to_string(id + 1));
-			}
-
 			sock.sendPage(url, &client, threadId, inet_ntoa(client_info.sin_addr));
 		}
 		// Proxy request
@@ -164,14 +151,6 @@ void clientThread(SOCKET client, sockaddr_in client_info, int threadId)
 			util.cout("Denying POST proxy request to \"" + url + "\"", 9, inet_ntoa(client_info.sin_addr), threadId);
 			sock.sendError(1000, &client);
 		}
-	}
-	// RPG
-	else if (req.substr(0, 3) == "RPG")
-	{
-		string url = req.substr(4, req.find(" ", 4) - 4);
-		// Regular request
-		util.cout("Received RPG for: " + url, 8, inet_ntoa(client_info.sin_addr), threadId);
-		rpg.ParseRequest(req, &client);
 	}
 	// Unknown request
 	else
