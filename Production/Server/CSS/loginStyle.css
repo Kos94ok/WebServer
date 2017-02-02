@@ -1,0 +1,44 @@
+#loginDiv
+{
+	width: 300px;
+	margin: auto;
+}
+
+#playerNameInput
+{
+	margin-left: 50px;
+	width: 200px;
+}
+
+#entryPointSelect
+{
+	margin-left: 27px;
+	width: 206px;
+}
+
+#characterRace
+{
+	margin-left: 49px;
+	width: 180px;
+}
+
+#genderSelectMale
+{
+	margin-left: 53px;
+}
+
+#characterCreateButton
+{
+	width: 140px;
+}
+
+#characterLoadButton
+{
+	width: 140px;
+	margin-left: 10px;
+}
+
+div.loginElement
+{
+	margin-bottom: 10px;
+}

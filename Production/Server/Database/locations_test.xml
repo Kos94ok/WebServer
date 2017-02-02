@@ -1,0 +1,20 @@
+﻿<LocationSelector>
+    <TreeViewId>LocationSelector_654d5dfc_4fee_441f_9ca8_8b6028805adc</TreeViewId>
+    <Guid>TestEnc_TestOne</Guid>
+    <Options>
+        <SelectorOption>
+            <Link>TestEnc_Goblin</Link>
+            <Chance>1</Chance>
+        </SelectorOption>
+        <SelectorOption>
+            <Link>TestEnc_Orc</Link>
+            <Chance>1</Chance>
+            <Condition>OrcCondition</Condition>
+            <Action>OrcAction</Action>
+        </SelectorOption>
+        <SelectorOption>
+            <Link>TestEnc_Dragon</Link>
+            <Chance>1</Chance>
+        </SelectorOption>
+    </Options>
+</LocationSelector>

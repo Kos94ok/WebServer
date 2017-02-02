@@ -3,8 +3,6 @@
 #include "socket.h"
 #include "util.h"
 #include "ejb.h"
-#include <locale>
-#include <codecvt>
 
 using namespace std;
 
@@ -15,13 +13,24 @@ void cSocketMain::sendPage(string url, SOCKET* client, int threadId, string ip)
 	string strbuf, buf;
 	ifstream file;
 	file.open(util.settings.mainPath + url, ios::in | ios::binary);
+	string contentType = "unknown";
+	string extension = url.substr(url.find_last_of('.'));
+	if (extension == ".html")
+		contentType = "text/html";
+	else if (extension == ".css")
+		contentType = "text/css";
+	else if (extension == ".js")
+		contentType = "application/javascript";
+
 	if (file.good())
 	{
 		// Reading the file
 		util.cout("File \"" + url + "\" found. Sending content.", 7, ip, threadId);
 		strbuf.clear();
 		ostringstream oss;
-		oss << "HTTP/1.1 200 OK\n\n";
+		oss << "HTTP/1.1 200 OK\n";
+		oss << "Content-Type: " + contentType + "; charset=utf-8\n";
+		oss << "Connection: close\n\n";
 		oss << file.rdbuf();
 		strbuf = oss.str();
 		// Parsing EJB script
@@ -45,22 +54,6 @@ void cSocketMain::sendPage(string url, SOCKET* client, int threadId, string ip)
 	file.close();
 }
 
-wstring s2ws(const std::string& str)
-{
-	using convert_typeX = std::codecvt_utf8<wchar_t>;
-	std::wstring_convert<convert_typeX, wchar_t> converterX;
-
-	return converterX.from_bytes(str);
-}
-
-string ws2s(const std::wstring& wstr)
-{
-	using convert_typeX = std::codecvt_utf8<wchar_t>;
-	std::wstring_convert<convert_typeX, wchar_t> converterX;
-
-	return converterX.to_bytes(wstr);
-}
-
 void cSocketMain::sendData(string data, SOCKET* client)
 {
 	send(*client, data.c_str(), data.length(), 0);
@@ -68,7 +61,7 @@ void cSocketMain::sendData(string data, SOCKET* client)
 
 void cSocketMain::sendDataToJS(wstring data, SOCKET* client)
 {
-	string regular = ws2s(data);
+	string regular = util.ws2s(data);
 	sendData(regular, client);
 }
 

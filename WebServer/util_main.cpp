@@ -2,10 +2,13 @@
 #include "stdafx.h"
 #include "util.h"
 #include "ejb.h"
+#include <locale>
+#include <codecvt>
 
 using namespace std;
 
 cUtilMain util;
+cRandom randomizer;
 
 vector<string> dictIn;
 vector<string> dictOut;
@@ -113,11 +116,15 @@ void cUtilMain::cout(string str, int level, string prefix, int threadId)
 		str = str.substr(0, settings.consoleWidth - 4) + "...";
 	}
 	// Flush data
-	coutAccess.lock();
-
-	std::cout << str << "\n";
-
-	coutAccess.unlock();
+	try
+	{
+		coutAccess.lock();
+		std::cout << str << "\n";
+		coutAccess.unlock();
+	}
+	catch (int i)
+	{
+	}
 }
 
 int cUtilMain::parseArguments(std::string args, std::string* key, std::string* value)
@@ -145,6 +152,28 @@ int cUtilMain::parseArguments(std::string args, std::string* key, std::string* v
 		}
 	}
 	return found;
+}
+
+wstring cUtilMain::s2ws(const std::string& str)
+{
+	using convert_typeX = std::codecvt_utf8<wchar_t>;
+	std::wstring_convert<convert_typeX, wchar_t> converterX;
+
+	return converterX.from_bytes(str);
+}
+
+string cUtilMain::ws2s(const std::wstring& wstr)
+{
+	using convert_typeX = std::codecvt_utf8<wchar_t>;
+	std::wstring_convert<convert_typeX, wchar_t> converterX;
+
+	return converterX.to_bytes(wstr);
+}
+
+wstring cUtilMain::getline(wifstream* file, wchar_t* buffer, const int bufferSize)
+{
+	file->getline(buffer, bufferSize);
+	return wstring(buffer);
 }
 
 void cSettings::load()
@@ -182,4 +211,22 @@ string cSettings::getEntry(string name)
 	}
 	file.close();
 	return retval;
+}
+
+void cRandom::seed()
+{
+	std::random_device rd;
+	engine = mt19937(rd());
+}
+
+int cRandom::getInt(int min, int max)
+{
+	std::uniform_int_distribution<int> dist(min, std::nextafter(max, INT_MAX));
+	return dist(engine);
+}
+
+double cRandom::getDouble(double min, double max)
+{
+	std::uniform_real_distribution<double> dist(min, std::nextafter(max, DBL_MAX));
+	return dist(engine);
 }

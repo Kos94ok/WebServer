@@ -9,13 +9,13 @@ cRPGLocation::cRPGLocation(std::string guid)
 	this->guid = guid;
 }
 
-cRPGLocation::cRPGLocation(std::string guid, std::wstring text)
+cRPGLocation::cRPGLocation(std::string guid, std::string text)
 {
 	this->guid = guid;
 	this->text = text;
 }
 
-cRPGLocation::cRPGLocation(std::string guid, std::wstring text, std::vector<cRPGDecision> options)
+cRPGLocation::cRPGLocation(std::string guid, std::string text, std::vector<cRPGDecision> options)
 {
 	this->guid = guid;
 	this->text = text;
@@ -23,10 +23,10 @@ cRPGLocation::cRPGLocation(std::string guid, std::wstring text, std::vector<cRPG
 		decision.push_back(opt);
 }
 
-void cRPGLocation::AddTextParagraph(wstring text)
+void cRPGLocation::AddTextParagraph(string text)
 {
 	if (this->text.length() > 0)
-		this->text.append(L"<br>");
+		this->text.append("<br>");
 	this->text.append(text);
 }
 
@@ -34,4 +34,9 @@ void cRPGLocation::AttachDecisionList(std::vector<cRPGDecision> options)
 {
 	for (cRPGDecision opt : options)
 		decision.push_back(opt);
+}
+
+cRPGSelector::cRPGSelector(std::string guid)
+{
+	this->guid = guid;
 }

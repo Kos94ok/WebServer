@@ -1,0 +1,17 @@
+F:\Workspace\CWork\WebServer\RPGEditor\bin\Release\RPGEditor.exe.config
+F:\Workspace\CWork\WebServer\RPGEditor\bin\Release\RPGEditor.exe
+F:\Workspace\CWork\WebServer\RPGEditor\bin\Release\RPGEditor.pdb
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor.csprojResolveAssemblyReference.cache
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\MainWindow.baml
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\MainWindow.g.cs
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor_MarkupCompile.cache
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor.g.resources
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor.Properties.Resources.resources
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor.csproj.GenerateResource.Cache
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor.exe
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\RPGEditor.pdb
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\Bullshit\App.g.cs
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\Windows\UnsavedChangesDialog.baml
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\Windows\UnsavedChangesDialog.g.cs
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\Windows\AboutDialog.baml
+F:\Workspace\CWork\WebServer\RPGEditor\obj\Release\Windows\AboutDialog.g.cs

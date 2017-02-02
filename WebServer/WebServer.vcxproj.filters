@@ -34,14 +34,11 @@
     <Filter Include="Файлы исходного кода\RPG">
       <UniqueIdentifier>{5299812b-7863-4379-afba-5578c2334d04}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы исходного кода\RPG\Locations">
-      <UniqueIdentifier>{b96c9fd8-b28e-42ed-931a-1690441aad77}</UniqueIdentifier>
+    <Filter Include="Файлы исходного кода\RPG\Headers">
+      <UniqueIdentifier>{663fd988-1c68-438f-a8f5-6dc2274c91a9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы исходного кода\RPG\Core">
-      <UniqueIdentifier>{198f981b-a5d3-4aee-a6b9-6ec4fb3b16dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы исходного кода\RPG\Network">
-      <UniqueIdentifier>{ae68ba20-eba9-46c5-83ab-e3aa4a7ffd54}</UniqueIdentifier>
+    <Filter Include="Файлы исходного кода\RPG\Source">
+      <UniqueIdentifier>{a03275d6-b8c3-47fa-9ade-dabbb36efee3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -66,20 +63,26 @@
     <ClInclude Include="thread.h">
       <Filter>Файлы исходного кода\Thread</Filter>
     </ClInclude>
-    <ClInclude Include="rpg_core.h">
-      <Filter>Файлы исходного кода\RPG\Core</Filter>
-    </ClInclude>
     <ClInclude Include="rpg_client.h">
-      <Filter>Файлы исходного кода\RPG\Network</Filter>
-    </ClInclude>
-    <ClInclude Include="rpg.h">
-      <Filter>Файлы исходного кода\RPG\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="rpg_location.h">
-      <Filter>Файлы исходного кода\RPG\Locations</Filter>
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
     </ClInclude>
     <ClInclude Include="rpg_network.h">
-      <Filter>Файлы исходного кода\RPG\Network</Filter>
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_location.h">
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg.h">
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_object.h">
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_database.h">
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rpg_world.h">
+      <Filter>Файлы исходного кода\RPG\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -101,11 +104,20 @@
     <ClCompile Include="thread_main.cpp">
       <Filter>Файлы исходного кода\Thread</Filter>
     </ClCompile>
-    <ClCompile Include="rpg_main.cpp">
-      <Filter>Файлы исходного кода\RPG</Filter>
+    <ClCompile Include="rpg_client.cpp">
+      <Filter>Файлы исходного кода\RPG\Source</Filter>
     </ClCompile>
     <ClCompile Include="rpg_location.cpp">
-      <Filter>Файлы исходного кода\RPG\Locations</Filter>
+      <Filter>Файлы исходного кода\RPG\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="rpg.cpp">
+      <Filter>Файлы исходного кода\RPG\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="rpg_database.cpp">
+      <Filter>Файлы исходного кода\RPG\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="rpg_network.cpp">
+      <Filter>Файлы исходного кода\RPG\Source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

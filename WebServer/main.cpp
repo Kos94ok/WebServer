@@ -10,6 +10,7 @@ void parseConsoleCommand(std::string cmd)
 {
 	if (cmd == "hide") { ShowWindow(GetConsoleWindow(), SW_HIDE); }
 	else if (cmd == "show") { ShowWindow(GetConsoleWindow(), SW_SHOW); }
+	else if (cmd == "rpg_reload") { rpg.ParseDatabase(); }
 }
 
 void fileConsole()
@@ -20,7 +21,8 @@ void fileConsole()
 	{
 		std::string buf;
 		file.open("console");
-		if (!file.eof()) {
+		if (!file.eof())
+		{
 			std::getline(file, buf);
 			parseConsoleCommand(buf);
 			file.close();
@@ -38,7 +40,11 @@ int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "");
 	std::vector<std::thread> threadPool;
+	randomizer.seed();
 
+	std::string pathToFolder = argv[0];
+	//util.cout("[Main] Running \"" + pathToFolder + "\"", 16);
+	util.cout("[Main] Loading settings from \"./settings.ini\"", 16);
 	util.settings.load();
 	std::thread fileConsole(fileConsole);
 
@@ -57,11 +63,11 @@ int main(int argc, char* argv[])
 	// Check index
 	std::ifstream indexTest(util.settings.mainPath + "index.html");
 	if (indexTest.good()) {
-		util.cout("Index found at \"" + util.settings.mainPath + "index.html" + "\"", 16);
+		util.cout("[Main] Index found at \"" + util.settings.mainPath + "index.html" + "\"", 16);
 		indexTest.close();
 	}
 	else {
-		util.cout("Can't find index at \"" + util.settings.mainPath + "index.html" + "\"", 16);
+		util.cout("[Main] Can't find index at \"" + util.settings.mainPath + "index.html" + "\"", 16);
 		getchar();
 		return 0;
 	}
@@ -96,7 +102,7 @@ int main(int argc, char* argv[])
 	using namespace std;
 
 	util.initDecoder();
-	util.cout("Listening at port " + port + "...", 16);
+	util.cout("[Main] Listening at port " + port + "...", 16);
 	while (true)
 	{
 		listen(listener, SOMAXCONN);
@@ -105,7 +111,17 @@ int main(int argc, char* argv[])
 		sockaddr_in client_info;
 		int size = sizeof(client_info);
 
+		util.cout("[Main] Waiting for incoming connection", 5);
 		client = accept(listener, (sockaddr*)&client_info, &size);
+		util.cout("[Main] Connection accepted", 5);
+
+		struct timeval timeout;
+		timeout.tv_sec = 0;
+		timeout.tv_usec = 0;
+
+		setsockopt(client, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof timeout);
+
+		util.cout("[Main] Start clear-up", 4);
 
 		float curtime = (float)timeGetTime();
 		if (threadData.size() > 0)
@@ -114,13 +130,11 @@ int main(int argc, char* argv[])
 			{
 				int i = (int)threadData.size() - 1;
 				threadPool[i].join();
-				//threadData.erase(threadData.begin() + i, threadData.begin() + i + 1);
-				//threadPool.erase(threadPool.begin() + i, threadPool.begin() + i + 1);
 				threadData.pop_back();
 				threadPool.pop_back();
-				//util.cout("Thread " + to_string(i) + " operating for " + to_string((curtime - threadData[i].timestamp) / 1000.f) + " seconds.");
 			}
 		}
+		util.cout("[Main] End clear-up", 4);
 
 		cThreadData dt;
 		dt.state = THREAD_UP;

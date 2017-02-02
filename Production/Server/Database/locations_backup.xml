@@ -1,0 +1,467 @@
+﻿<Folder>
+    <Name>LocationFolder_85a76529_9f77_471e_8785_5ef5af1b224d</Name>
+    <Header>TestLoc</Header>
+    <LocationData>
+        <TreeViewId>LocationEntry_af3d8279_a98e_4d8d_85e6_53d309063bfe</TreeViewId>
+        <Guid>TestLoc_Entry</Guid>
+        <Description><p>Вы стоите возле стены пещеры странной формы. Вы не знаете, как сюда попали, и как отсюда выбраться. В полнейшей темноте вы пытаетесь разглядеть хоть что-нибудь, но все безуспешно.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Ощупать стены</Text>
+                <LocationLink>TestLoc_South_WallTouching</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_f9200ff5_14a1_48c7_bf61_beffb991b592</TreeViewId>
+        <Guid>TestLoc_South_WallTouching</Guid>
+        <Description><p>Вы ощупываете стены вслепую, но не находите ничего полезного. Это просто стены. Они мокрые, разве что.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Остаться на месте</Text>
+                <LocationLink>TestLoc_South_BeingStubborn</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_150c95ad_cb71_47c5_9c3f_9b0ed8624567</TreeViewId>
+        <Guid>TestLoc_South_BeingStubborn</Guid>
+        <Description><p>Вы остаетесь на месте. Ничего не происходит. Наверное, это не лучшая идея.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Остаться на месте</Text>
+                <LocationLink>TestLoc_South_BeingVeryStubborn</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_9e2ed645_ce01_42a3_92fa_e6b7f60c36a3</TreeViewId>
+        <Guid>TestLoc_South_BeingVeryStubborn</Guid>
+        <Description><p>Да, можно стоять на месте долго, но ничего так и не произойдет.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Остаться на месте</Text>
+                <LocationLink>TestLoc_South_BeingVeryStubborn</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_9b7e393e_c30c_4fae_bb39_c9ca15076bc5</TreeViewId>
+        <Guid>TestLoc_Center</Guid>
+        <Description><p>Вы стоите в просторной пещере с небольшим озером в центре. Здесь все так же темно, и ориентироваться можно только по звуку собственных шагов и звону падающих в озерцо капель воды.</p><p>Судя по всему, пещера имеет форму колодца, и её стены закруглены. Вдоль озера можно пройти по сухой земле.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Обойти озеро с правой стороны</Text>
+                <LocationLink>TestLoc_East</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Обойти озеро с левой стороны</Text>
+                <LocationLink>TestLoc_West</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пройти озеро насквозь</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_39b51d3b_2e18_4a5a_b00d_86367dd6b384</TreeViewId>
+        <Guid>TestLoc_West</Guid>
+        <Description><p>Пробравшись вдоль стены, вы попадаете в небольшой карман, со всех сторон заваленный всевозможным мусором. Идти дальше нельзя, можно только вернуться назад.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Вернуться назад вдоль стены</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_159108c2_cf18_4f43_894f_9d42f226774b</TreeViewId>
+        <Guid>TestLoc_Lake</Guid>
+        <Description><p>Вы заходите в холодную воду, которая достает вам до колена. Вам хочется поскорее выбраться на сушу.</p><p>Вы чувствуете легкое дуновение ветра в лицо. Наверное, рядом есть выход.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Пойти в сторону выхода</Text>
+                <LocationLink>TestLoc_North</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в противоположную сторону</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в третью сторону</Text>
+                <LocationLink>TestLoc_East</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_3802ff36_95b0_4282_ab71_c69ed48eb771</TreeViewId>
+        <Guid>TestLoc_East</Guid>
+        <Description><p>Вы стоите на небольшой каменистой площадке. Стена рядом с вами очень гладкая, скорее всего, сделана человеком.</p><p>Рядом с вами есть удобный спуск к озеру.</p><p>Вы чувствуете легкое дуновение ветра в лицо. Если обойти озеро по стене, то, возможно, можно добраться до выхода.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Пойти в сторону выхода</Text>
+                <LocationLink>TestLoc_North</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в противоположную сторону</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Попытаться осмотреть стену</Text>
+                <LocationLink>TestLoc_East_WallTouching</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_52de665f_8a69_439f_b27c_7f2b16b32a6b</TreeViewId>
+        <Guid>TestLoc_East_WallTouching</Guid>
+        <Description><p>Вы не можете найти никаких зацепок. Стена абсолютно гладкая, без единой выемки.</p><p>Вы чувствуете легкое дуновение ветра в лицо. Если обойти озеро по стене, то, скорее всего, можно добраться до выхода.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Пойти в сторону выхода</Text>
+                <LocationLink>TestLoc_North</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в противоположную сторону</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_30a5c00d_91c8_4890_bbc1_09ad394b11c1</TreeViewId>
+        <Guid>TestLoc_North</Guid>
+        <Description><p>Вы подходите к металлической решетке, прочно встроенной в стену пещеры.</p><p>Если повернуться спиной к решетке, проход вдоль озера справа от вас будет завален, но можно без проблем пройти слева или через озеро напрямик.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Дернуть за решетку</Text>
+                <LocationLink>TestLoc_North_Door</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти вдоль озера</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_767de133_515b_48d8_b118_723d92159ed0</TreeViewId>
+        <Guid>TestLoc_North_Door</Guid>
+        <Description><p>Вы с силой дергаете за решетку. Она громко лязгает и остается на месте. В ней есть дверь, но она закрыта.</p><p>Если повернуться спиной к решетке, проход вдоль озера справа от вас будет завален, но можно без проблем пройти слева или через озеро напрямик.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Дернуть еще раз</Text>
+                <LocationLink>TestLoc_North_DoorStronger</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти вдоль озера</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_36889aa6_3bba_48be_9ceb_4fdb290ebe46</TreeViewId>
+        <Guid>TestLoc_North_DoorStronger</Guid>
+        <Description><p>Вы продолжаете дергать дверь, но она все так же не поддается.</p><p>Если повернуться спиной к решетке, проход вдоль озера справа от вас будет завален, но можно без проблем пройти слева или через озеро напрямик.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Дернуть еще раз</Text>
+                <LocationLink>TestLoc_North_DoorStronger</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти вдоль озера</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Отчаяться</Text>
+                <LocationLink>TestLoc_Despair</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_210d9008_9bce_488a_af64_9fd10d54b577</TreeViewId>
+        <Guid>TestLoc_Despair</Guid>
+        <Description><p>Вы отчаиваетесь и садитесь на холодную землю возле двери.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Продолжить</Text>
+                <LocationLink>TestEnc_DoorDespair</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_082f6372_a1c4_481f_aa08_b56a57aa5a6f</TreeViewId>
+        <Guid>TestEnc_DoorDespair</Guid>
+        <Description><p>To be continued...</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Сначала</Text>
+                <LocationLink>TestLoc_Entry</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+</Folder>
+<Folder>
+    <Name>Folder_c99a4170_9d17_400c_8d07_dd3f52b361b7</Name>
+    <Header>Безопасные области</Header>
+    <Folder>
+        <Name>Folder_f9dfea00_4cfd_4347_be93_9d3615f2ffea</Name>
+        <Header>Города</Header>
+        <Folder>
+            <Name>Folder_cf647739_59a4_4fcb_84a1_66d3e80b9c23</Name>
+            <Header>Остерак</Header>
+            <LocationData>
+                <TreeViewId>LocationData_24ae5ec8_7f29_4a01_bcf4_dfcb62b5498b</TreeViewId>
+                <Guid>Osterak_NorthEastGate</Guid>
+                <Description><p>Вы стоите возле северо-восточных врат тайранского города, носящего название Остерак. Вдоль невысокого деревянного частокола устало бродят стражи, со стороны города слышится характерный шум живого города.</p><p>{if time==day}<br>Через ворота активно перемещаются многочисленные повозки и путешественники. Большую часть окружающих составляют тайраны, но периодически можно заметить и выделяющегося из толпы хельверу или группу нейков.</p><p>Стража достаточно лениво поглядывает на проезжающих, не обращая внимания ни на их расу, ни на груз, который они могут провезти.</p><p>{else}<br>Под покровом ночи движение через ворота пусть и замедляется, но не останавливается. Даже несмотря на то, что Остерак является небольшим городом, торговля с соседями ведется очень активно, и большое количество путешественников и торговцев прибывает в город даже ночью.<br>{endif}</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Войти в город</Text>
+                        <LocationLink>Osterak_NorthEastPath</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_600a8bfa_cfc4_4bea_915c_8333813ea327</TreeViewId>
+                <Guid>Osterak_NorthEastPath</Guid>
+                <Description><p>Вы идете по широкой грунтовой дороге, ведущей к северо-восточным вратам от центральной площади города. {if time==day}Вас окружает плотный поток путешественников, которые, по большей части, движутся в сторону городской площади.{endif}</p><p>По обе стороны от дороги расположены многочисленные деревянные постройки различного назначения. {if time==day}Откуда-то из дворов доносятся громкие детские крики.{else}Даже ночью откуда-то из-за домов слышны крики играющих детей.{endif} Как и в любом тайранском городе, здесь у каждой семьи имеется хотя бы один маленький ребенок, и детские вопли стали чем-то совершенно привычным для местных жителей.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На центральную площадь</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К северо-восточным воротам</Text>
+                        <LocationLink>Osterak_NorthEastGate</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Заглянуть во дворы</Text>
+                        <LocationLink>Osterak_LivingAreas-2</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_fb96c9b0_1ebb_4030_9ae9_2119a69be8e3</TreeViewId>
+                <Guid>Osterak_CentralPlaza</Guid>
+                <Description><p>{if time==day}<br>Вы стоите на центральной площади Остерака, прямо посреди многочисленной толпы снующих мимо вас тайранов. {if race==tairan}Несмотря на то, что каждый из них всегда куда-то бежит и опаздывает, вам привычен подобный образ жизни, и вы чувствуете себя совершенно уверенно в толпе.{else}Каждый из них торопится по своим делам, сбивая с мысли любого приезжего, кто не успел привыкнуть к такой жизни.{endif}<br>{endif}</p><p>Стоя на площади города, никак нельзя подумать, что это достаточно маленький городок. Улицы не пустеют ни днем, ни ночью, и всегда можно слышать отовсюду как и здоровый смех отдыхающих взрослых, так и радостные вопли играющих малышей.</p><p>Вы видите несколько улиц, уходящих в разные стороны от площади. На северо-восток уходит длинная широкая улица, ведущая к северо-восточным воротам, далеко на западе находится здание Совета. Вы также видите крупную каменную таверну на самом краю площади под гордой вывеской "Городской очаг". Кроме того, совсем рядом с вами находится неприметная доска объявлений, на которой виднеется несколько бумаг.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>К северо-восточным воротам</Text>
+                        <LocationLink>Osterak_NorthEastPath</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К зданию Совета</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Зайти в таверну</Text>
+                        <LocationLink>Osterak_Tavern</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Посмотреть на доску объявлений</Text>
+                        <LocationLink>Osterak_InfoBoard</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_8f9820f1_7b26_4989_9e0d_3a03e3ea0be7</TreeViewId>
+                <Guid>Osterak_LivingAreas-1</Guid>
+                <Description><p>Жилые кварталы Остерака выглядят неприметно. Некоторые дома - совсем небольшие - образуют дворы-колодцы, другие же, принадлежащие более богатым семьям, занимают большую территорию и скрываются за высокими заборами.</p><p>Огромные поместья крупнейших династий, что живут в городе, располагаются за его чертой, поскольку они занимают едва ли не такую же площадь, как и целый город.</p><p>{if time==day}<br>По дворам активно бегают дети, за малышами пристально следят ребята постарше или их родители, и в целом город выглядит совершенно мирным.<br>{elseif time==night}<br>Дворы окутаны ночной прохладой. Улицы в этом квартале освещаются лишь тусклыми масляными лампами, да светом редких окон. Изредка из глубин слышится детский крик или плач. Даже по ночам на улицах можно встретить спокойно гуляющих детей. На удивление, уровень преступности в Остераке достаточно низок.<br>{endif}</p><p>{if quest.Osterak_ShadyGuy.available}<br>В стороне от дороги вы замечаете молодого человека, который явно старается не привлекать к себе лишнего внимания. <br>{endif}</p><p>Из жилой зоны есть всего один выход - обратно на главную улицу Остерака. Одна из достаточно широких улиц уходит вглубь, к домам, которые кажутся несколько более богатыми.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На главную улицу</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Вглубь жилых районов</Text>
+                        <LocationLink>Osterak_LivingAreas-4</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_4bb5d319_d50f_4205_b8ee_48daac029e1f</TreeViewId>
+                <Guid>Osterak_LivingAreas-2</Guid>
+                <Description><p>Пробравшись через узкий проход между оградами соседних домов, вы оказываетесь в небольшом дворовом колодце, образованный несколькими деревянными домами и примыкающий к городской стене.</p><p>Из колодца есть всего один выход - обратно на загруженную и шумную дорогу.</p><p>{if race==tairan}<br>Вы видите играющих во дворе детей, и ваше сердце радуется этой прекрасной картине.<br>{endif}</p><p>{if race==helvera&&time==night}<br>Вы поднимаете глаза к небу и видите прекрасную луну, озаряющую своим светом немногочисленных детей во дворе. Вы никогда не понимали любви тайранов к детям, но в лунном свете даже самые капризные малыши становились более тихими и мирными.<br>{endif}</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Выйти на дорогу</Text>
+                        <LocationLink>Osterak_NorthEastPath</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_e76596ae_9fbe_4514_b853_a23944f6d883</TreeViewId>
+                <Guid>Osterak_LivingAreas-3</Guid>
+                <Description><p>Совсем рядом с семейной площадью расположены наиболее богатые дома во всем Остераке. Практически все жилые поместья в этой части города построены из хорошо отесаного камня, а дороги чисты и хорошо освещены.</p><p>Отсюда легко можно выйти на площадь у здания Совета, либо же можно уйти глубже в жилые области.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Выйти на площадь</Text>
+                        <LocationLink>Osterak_CouncilPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Уйти глубже в жилые зоны</Text>
+                        <LocationLink>Osterak_LivingAreas-4</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_f7695eb2_b7c2_477f_bbdf_8b262643139c</TreeViewId>
+                <Guid>Osterak_LivingAreas-4</Guid>
+                <Description><p>Вас окружают дома, которые нельзя назвать ни богатыми, ни бедными. Часть из них построена из деревянных досок, часть - из отесанного булыжника. Освещение на улице внезапно обрывается именно в этой области.</p><p>На восток уходит {if time==night}неосвещенная {endif}дорога, которая, очевидно, ведет к более бедным жилым кварталам. Ведущая же на запад дорога хорошо освещена и ухожена.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>В богатый квартал</Text>
+                        <LocationLink>Osterak_LivingAreas-3</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>В бедный квартал</Text>
+                        <LocationLink>Osterak_LivingAreas-1</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_8cd2cab4_99fc_4f31_b02c_c7251cf1a690</TreeViewId>
+                <Guid>Osterak_MainStreet</Guid>
+                <Description><p>Длинная прямая улица, которая соединяет между собой площадь Совета и центральную площадь, носит невыделяющееся название главной улицы Остерака. По обе стороны от дороги стоят высокие, по большей части каменные поместья наиболее влиятельных семей в городе. Дорожное покрытие явно уложено совсем недавно: гладкий булыжник все еще тускло блестит при свете селериевых фонарей, а высокие изгороди у поместий создают впечатление нахождения на русле искусственной реки.</p><p>На западе хорошо видно здание Совета семей - сердца любого города тайранов, на востоке же осталась крупная центральная площадь, в любое время суток занятая многочисленной толпой. От центральной улицы ответвляется несколько улиц поменьше, которые ведут к торговым рядам и жилым кварталам.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На центральную площадь</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К зданию Совета</Text>
+                        <LocationLink>Osterak_CouncilPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К торговым рядам</Text>
+                        <LocationLink>Osterak_TradingRows</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>В жилые кварталы</Text>
+                        <LocationLink>Osterak_LivingAreas-1</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_babb13a7_d0f9_4b00_ae2c_8fb259a76b9f</TreeViewId>
+                <Guid>Osterak_Tavern</Guid>
+                <Description><p>"Городской очаг" всегда привлекает большое количество посетителей, будучи одним из двух городских трактиров. Управляемый семьей Венейлан, он считается заведением для членов бедных семей или приезжих. Удачное расположение на центральной городской площади способствует постоянному наличию посетителей, и даже по ночам в таверне просто не протолкнуться.</p><p>Большинство столов заняты шумными компаниями, большинство из которых все же является тайранами, но можно заметить и некоторых представителей прочих рас.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Покинуть "Городской очаг"</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_09d39110_4a99_4eff_b9d3_8f76093e53e4</TreeViewId>
+                <Guid>Osterak_InfoBoard</Guid>
+                <Description><p>Столб объявлений на площади всегда увешен многочисленными бумагами различного содержания. Часть из них написаны криво и от руки, но некоторые - определенно были вычерчены тренированной рукой. Все объявления написаны на тайранском языке различной степени грамотности.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Смотреть на красивые объявления</Text>
+                        <LocationLink>Osterak_InfoBoardSelect_Fancy</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Смотреть на прочие объявления</Text>
+                        <LocationLink>Osterak_InfoBoardSelect_Other</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Вернуться на площадь</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_be954884_b878_48e0_9653_84f2076f39fe</TreeViewId>
+                <Guid>Osterak_TradingRows</Guid>
+                <Description><p>Торговые ряды Остерака напоминают его центральную площадь, с той лишь разницей, что здесь все стоят на месте и пытаются продать проходящим и проезжающим мимо свои товары.</p><p>Очевидно, что рынок образовался стихийно, и никто за ним не следит. Многочисленные палатки, витрины и столы завалены всевозможными товарами разной степени качества, цены на большинство из которых безбожно завышены. Город, являясь торговым центром в своем регионе, привлекает большое количество приезжих, которые готовы отдать свои деньги за, казалось бы, бесполезную вещь. Впрочем, многие из них понимают, что эту вещь всегда можно перепродать на родине за тройную цену.</p><p>В северо-западной части торгового ряда виднеется здание крытого рынка, открытие которого назначено уже на следующую луну. В южной же части между домами виднеется проход на главную улицу Остерака.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На главную улицу</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_d4235b59_420b_4ae3_be93_0730e67b321e</TreeViewId>
+                <Guid>Osterak_CouncilPlaza</Guid>
+                <Description><p>Вторая по величине площадь Остерака зовется семейной, поскольку на ней расположен Совет семей, центральный орган управления городом, куда входят представители крупнейших семей области.</p><p>Само же здание совета представляет собой массивное здание из белого кирпича - редкого и дорогого для тайранов строительного материала - с многочисленными колоннами и высоким шпилем. В этом здании проводятся слушания по судебным делам, если те касаются всего города, а также обсуждаются вопросы, влияющие на общественную жизнь.</p><p>Как и всегда, здание Совета закрыто для посетителей, не имеющих особого дела.</p><p>В этой части города приезжих становится резко меньше, и в целом столпотворение ощущается далеко не так сильно. {if time==night}Сейчас же площадь и вовсе выглядит практически заброшенной, если не считать редких проходящих по своим делам тайранов.{endif}</p><p>На восток уходит главная улица, ведущая к центральной площади, а узкие улочки между домами приведут во дворы.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>К центральной площади</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>В жилые области</Text>
+                        <LocationLink>Osterak_LivingAreas-3</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+        </Folder>
+    </Folder>
+</Folder>
+<Folder>
+    <Name>Folder_4ef9175d_792b_49da_9b10_7975fb6d57d4</Name>
+    <Header>Прочее</Header>
+    <LocationData>
+        <TreeViewId>LocationData_8515afcb_dd6c_4fa3_ae0e_a9a909f5e1aa</TreeViewId>
+        <Guid>Void</Guid>
+        <Description><p>Пустота... холодна.</p></Description>
+        <Decisions>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationData_fc19d165_8573_4b29_a522_db95a8fbeaef</TreeViewId>
+        <Guid>Development_Entry</Guid>
+        <Description><p>Точка входа для области в разработке.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Продолжить</Text>
+                <LocationLink>Osterak_NorthEastGate</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationData_ece53c23_455c_4856_9242_71c5c7a0f27d</TreeViewId>
+        <Guid>Error_SessionExpired</Guid>
+        <Description><p>Время сессии истекло или сессия была переназначена. Попробуйте обновить страницу и войти снова.</p></Description>
+        <Decisions>
+        </Decisions>
+    </LocationData>
+</Folder>

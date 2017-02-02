@@ -1,11 +1,50 @@
+﻿<!DOCTYPE html> 
 <html>
 	<head>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width">
 		<title>Game</title>
 		<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+		<link rel="stylesheet" type="text/css" href="CSS/loginStyle.css"/>
 	</head>
 	<body oncontextmenu="OnContextMenu(event)">
+		<!-- Load the scripts -->
+		<script src="Scripts/util.js"></script>
+		<script src="Scripts/request.js"></script>
 		<script src="Scripts/core.js"></script>
+		<script src="Scripts/location.js"></script>
+		<!-- Login -->
+			<div id='loginDiv'>
+				<div class='loginElement'>
+					<label>Имя: </label><input id="playerNameInput" type="text"/>
+				</div>
+				<div class='loginElement'>
+					<label>Раса: </label>
+					<select id='characterRace'>
+  						<option value="tairan">Тайран</option>
+  						<option value="helvera">Хельвера</option>
+					</select>
+					<!-- Race info div -->
+					<div id='raceInfoWindow'></div>
+					<image id='raceInfoQuestion' OnMouseEnter='RaceInfoOnMouseEnter()' OnMouseLeave='RaceInfoOnMouseLeave()'/>
+				</div>
+				<div class='loginElement'>
+					<label>Пол: </label>
+					<input id="genderSelectMale" type="radio" name="characterGender" value="male" checked> Мужской
+					<input id="genderSelectFemale" type="radio" name="characterGender" value="female"> Женский
+				</div>
+				<div class='loginElement'>
+					<label>Модуль: </label>
+					<select id='entryPointSelect'>
+						<option value="Development">Тестирование</option>
+						<option value="TestLoc">Демо</option>
+					</select> 
+				</div>
+				<div class='loginElement'>
+					<input id="characterCreateButton" type="button" value="Создать персонажа" onclick="StartGame('New')"/>
+					<input id="characterLoadButton" type="button" value="Загрузить игру" onclick="StartGame('Resume')" />
+				</div>
+			</div>
 		<!-- Main div -->
 		<div id='coreDiv'>
 			<!-- Area description -->
@@ -14,7 +53,24 @@
 			<!-- Buttons -->
 			<div id='gameButtonsDiv'>
 			</div>
-			<script>SendDataRequest(0)</script>
 		</div>
+		<!-- Information div on the side -->
+		<div id='infoDiv'>
+			<div id='debugDiv' class='infoBox'>
+				<p class='infoBoxHeader'><b>Информация:</b></p>
+				<p class='debugBoxParagraph' id='debugPlayerNameP'></p>
+				<p class='debugBoxParagraph' id='debugSessionIndexP'></p>
+				<p class='debugBoxParagraph' id='debugLocationNameP'></p>
+				<p class='debugBoxParagraph' id='debugCharacterRaceP'></p>
+				<p class='debugBoxParagraph' id='debugCharacterGenderP'></p>
+				<p class='debugBoxParagraph' id='debugWorldTimeP'></p>
+			</div>
+			<div id='playersDiv' class='infoBox'>
+				<p class='infoBoxHeader'><b>Игроки в локации:</b></p>
+				<p>---</p>
+			</div>
+		</div>
+		<!-- Initialization script -->
+		<script>Init()</script>
 	</body>
 </html>

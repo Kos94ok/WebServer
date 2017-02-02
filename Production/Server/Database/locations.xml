@@ -1,0 +1,857 @@
+﻿<Folder>
+    <Name>LocationFolder_85a76529_9f77_471e_8785_5ef5af1b224d</Name>
+    <Header>TestLoc</Header>
+    <LocationData>
+        <TreeViewId>LocationEntry_af3d8279_a98e_4d8d_85e6_53d309063bfe</TreeViewId>
+        <Guid>TestLoc_Entry</Guid>
+        <Description><p>Вы стоите возле стены пещеры странной формы. Вы не знаете, как сюда попали, и как отсюда выбраться. В полнейшей темноте вы пытаетесь разглядеть хоть что-нибудь, но все безуспешно.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Ощупать стены</Text>
+                <LocationLink>TestLoc_South_WallTouching</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_f9200ff5_14a1_48c7_bf61_beffb991b592</TreeViewId>
+        <Guid>TestLoc_South_WallTouching</Guid>
+        <Description><p>Вы ощупываете стены вслепую, но не находите ничего полезного. Это просто стены. Они мокрые, разве что.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Остаться на месте</Text>
+                <LocationLink>TestLoc_South_BeingStubborn</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_150c95ad_cb71_47c5_9c3f_9b0ed8624567</TreeViewId>
+        <Guid>TestLoc_South_BeingStubborn</Guid>
+        <Description><p>Вы остаетесь на месте. Ничего не происходит. Наверное, это не лучшая идея.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Остаться на месте</Text>
+                <LocationLink>TestLoc_South_BeingVeryStubborn</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_9e2ed645_ce01_42a3_92fa_e6b7f60c36a3</TreeViewId>
+        <Guid>TestLoc_South_BeingVeryStubborn</Guid>
+        <Description><p>Да, можно стоять на месте долго, но ничего так и не произойдет.</p><p>Вам кажется, что вы слышите звуки падающей воды где-то за спиной. Никаких других ориентиров у вас нет.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Идти на звук</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Остаться на месте</Text>
+                <LocationLink>TestLoc_South_BeingVeryStubborn</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_9b7e393e_c30c_4fae_bb39_c9ca15076bc5</TreeViewId>
+        <Guid>TestLoc_Center</Guid>
+        <Description><p>Вы стоите в просторной пещере с небольшим озером в центре. Здесь все так же темно, и ориентироваться можно только по звуку собственных шагов и звону падающих в озерцо капель воды.</p><p>Судя по всему, пещера имеет форму колодца, и её стены закруглены. Вдоль озера можно пройти по сухой земле.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Обойти озеро с правой стороны</Text>
+                <LocationLink>TestLoc_East</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Обойти озеро с левой стороны</Text>
+                <LocationLink>TestLoc_West</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пройти озеро насквозь</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_39b51d3b_2e18_4a5a_b00d_86367dd6b384</TreeViewId>
+        <Guid>TestLoc_West</Guid>
+        <Description><p>Пробравшись вдоль стены, вы попадаете в небольшой карман, со всех сторон заваленный всевозможным мусором. Идти дальше нельзя, можно только вернуться назад.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Вернуться назад вдоль стены</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_159108c2_cf18_4f43_894f_9d42f226774b</TreeViewId>
+        <Guid>TestLoc_Lake</Guid>
+        <Description><p>Вы заходите в холодную воду, которая достает вам до колена. Вам хочется поскорее выбраться на сушу.</p><p>Вы чувствуете легкое дуновение ветра в лицо. Наверное, рядом есть выход.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Пойти в сторону выхода</Text>
+                <LocationLink>TestLoc_North</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в противоположную сторону</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в третью сторону</Text>
+                <LocationLink>TestLoc_East</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_3802ff36_95b0_4282_ab71_c69ed48eb771</TreeViewId>
+        <Guid>TestLoc_East</Guid>
+        <Description><p>Вы стоите на небольшой каменистой площадке. Стена рядом с вами очень гладкая, скорее всего, сделана человеком.</p><p>Рядом с вами есть удобный спуск к озеру.</p><p>Вы чувствуете легкое дуновение ветра в лицо. Если обойти озеро по стене, то, возможно, можно добраться до выхода.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Пойти в сторону выхода</Text>
+                <LocationLink>TestLoc_North</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в противоположную сторону</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Попытаться осмотреть стену</Text>
+                <LocationLink>TestLoc_East_WallTouching</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_52de665f_8a69_439f_b27c_7f2b16b32a6b</TreeViewId>
+        <Guid>TestLoc_East_WallTouching</Guid>
+        <Description><p>Вы не можете найти никаких зацепок. Стена абсолютно гладкая, без единой выемки.</p><p>Вы чувствуете легкое дуновение ветра в лицо. Если обойти озеро по стене, то, скорее всего, можно добраться до выхода.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Пойти в сторону выхода</Text>
+                <LocationLink>TestLoc_North</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти в противоположную сторону</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_30a5c00d_91c8_4890_bbc1_09ad394b11c1</TreeViewId>
+        <Guid>TestLoc_North</Guid>
+        <Description><p>Вы подходите к металлической решетке, прочно встроенной в стену пещеры.</p><p>Если повернуться спиной к решетке, проход вдоль озера справа от вас будет завален, но можно без проблем пройти слева или через озеро напрямик.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Дернуть за решетку</Text>
+                <LocationLink>TestLoc_North_Door</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти вдоль озера</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_767de133_515b_48d8_b118_723d92159ed0</TreeViewId>
+        <Guid>TestLoc_North_Door</Guid>
+        <Description><p>Вы с силой дергаете за решетку. Она громко лязгает и остается на месте. В ней есть дверь, но она закрыта.</p><p>Если повернуться спиной к решетке, проход вдоль озера справа от вас будет завален, но можно без проблем пройти слева или через озеро напрямик.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Дернуть еще раз</Text>
+                <LocationLink>TestLoc_North_DoorStronger</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти вдоль озера</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_36889aa6_3bba_48be_9ceb_4fdb290ebe46</TreeViewId>
+        <Guid>TestLoc_North_DoorStronger</Guid>
+        <Description><p>Вы продолжаете дергать дверь, но она все так же не поддается.</p><p>Если повернуться спиной к решетке, проход вдоль озера справа от вас будет завален, но можно без проблем пройти слева или через озеро напрямик.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Дернуть еще раз</Text>
+                <LocationLink>TestLoc_North_DoorStronger</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Пойти вдоль озера</Text>
+                <LocationLink>TestLoc_Center</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Зайти в озеро</Text>
+                <LocationLink>TestLoc_Lake</LocationLink>
+            </LocationDecision>
+            <LocationDecision>
+                <Text>Отчаяться</Text>
+                <LocationLink>TestLoc_Despair</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationEntry_210d9008_9bce_488a_af64_9fd10d54b577</TreeViewId>
+        <Guid>TestLoc_Despair</Guid>
+        <Description><p>Вы отчаиваетесь и садитесь на холодную землю возле двери.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Продолжить...</Text>
+                <LocationLink>TestEnc_DoorDespairSelector</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationSelector>
+        <TreeViewId>LocationSelector_80e962dd_bc96_4a24_b417_e0f2a1de1fc2</TreeViewId>
+        <Guid>TestEnc_DoorDespairSelector</Guid>
+        <Options>
+            <SelectorOption>
+                <Link>TestEnc_Goblin_Encounter</Link>
+                <Chance>1</Chance>
+            </SelectorOption>
+            <SelectorOption>
+                <Link>TestEnc_Granny_Encounter</Link>
+                <Chance>1</Chance>
+            </SelectorOption>
+            <SelectorOption>
+                <Link>TestEnc_DoorOpensItself_Encounter</Link>
+                <Chance>1</Chance>
+            </SelectorOption>
+        </Options>
+    </LocationSelector>
+    <Folder>
+        <Name>Folder_72778410_be78_4c2a_8c16_d48cd3a43243</Name>
+        <Header>ExitEncounters</Header>
+        <Folder>
+            <Name>Folder_2a00328b_c039_4505_a01b_6e913bf13741</Name>
+            <Header>TestEnc_Goblin</Header>
+            <LocationData>
+                <TreeViewId>LocationData_6a392634_c0b2_4f36_af96_84106c723f5d</TreeViewId>
+                <Guid>TestEnc_Goblin_Encounter</Guid>
+                <Description><p>Вы слышите странный звук слева от вас, и внезапно из темноты выходит страшный зеленокожий гоблин. Он смотрит прямо на вас с дубиной в руке.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Поговорить с ним</Text>
+                        <LocationLink>TestEnc_Goblin_Talking</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Попытаться бежать</Text>
+                        <LocationLink>TestEnc_Goblin_TryToRun</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_521e2be3_eb2c_4a0b_9180_0109b3bdb1a7</TreeViewId>
+                <Guid>TestEnc_Goblin_TryToRun</Guid>
+                <Description><p>Вы пытаетесь бежать, но, видимо, вы забыли, что сидите на полу в отчаянии. Еще до того, как вы успеваете подняться на ноги, гоблин подбегает, замахивается дубиной, и наступает темнота.</p><p>Вы мертвы.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Вернуться к отчаянию</Text>
+                        <LocationLink>TestLoc_Despair</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Начать сначала</Text>
+                        <LocationLink>TestLoc_Entry</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_132e40d6_debf_46d3_b595_6d68a9a2fe23</TreeViewId>
+                <Guid>TestEnc_Goblin_Talking</Guid>
+                <Description><p>Вы пытаетесь поговорить с гоблином, но, судя по всему, он не в настроении. Замахнувшись дубиной, он бьет вас по голове.</p><p>Вы мертвы.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Вернуться к отчаянию</Text>
+                        <LocationLink>TestLoc_Despair</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Начать сначала</Text>
+                        <LocationLink>TestLoc_Entry</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+        </Folder>
+        <Folder>
+            <Name>Folder_1b9c26fd_6774_41a4_a843_7933163d7566</Name>
+            <Header>TestEnc_Granny</Header>
+            <LocationData>
+                <TreeViewId>LocationData_9929b77d_6123_4729_8601_a8295c790dca</TreeViewId>
+                <Guid>TestEnc_Granny_Encounter</Guid>
+                <Description><p>Встреча с бабушкой. Нет текста.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Вернуться к отчаянию</Text>
+                        <LocationLink>TestLoc_Despair</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_30f8e0b6_8a62_43ac_bcc3_b4069c382a38</TreeViewId>
+                <Guid>TestEnc_Granny_SayHello</Guid>
+                <Description><p>Вы радостно машете бабушке, она улыбается вам в ответ и протягивает конфету.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Вернуться к отчаянию</Text>
+                        <LocationLink>TestLoc_Despair</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Начать сначала</Text>
+                        <LocationLink>TestLoc_Entry</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+        </Folder>
+        <Folder>
+            <Name>Folder_302a1013_2c60_4831_9026_67c7af2b3cc6</Name>
+            <Header>TestEnc_DoorOpensItself</Header>
+            <LocationData>
+                <TreeViewId>LocationData_6572cb29_bf96_429d_86db_2598aebc3bd7</TreeViewId>
+                <Guid>TestEnc_DoorOpensItself_Encounter</Guid>
+                <Description><p>Дверь сама себя открыла. Нет текста.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Вернуться к отчаянию</Text>
+                        <LocationLink>TestLoc_Despair</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+        </Folder>
+    </Folder>
+</Folder>
+<Folder>
+    <Name>Folder_c99a4170_9d17_400c_8d07_dd3f52b361b7</Name>
+    <Header>Безопасные области</Header>
+    <Folder>
+        <Name>Folder_f9dfea00_4cfd_4347_be93_9d3615f2ffea</Name>
+        <Header>Города</Header>
+        <Folder>
+            <Name>Folder_cf647739_59a4_4fcb_84a1_66d3e80b9c23</Name>
+            <Header>Остерак</Header>
+            <LocationData>
+                <TreeViewId>LocationData_24ae5ec8_7f29_4a01_bcf4_dfcb62b5498b</TreeViewId>
+                <Guid>Osterak_NorthEastGate</Guid>
+                <Description><p>Вы стоите возле северо-восточных врат тайранского города, носящего название Остерак. Вдоль невысокого деревянного частокола устало бродят стражи, со стороны города слышится характерный шум живого города.</p><p>{if time==day}<br>Через ворота активно перемещаются многочисленные повозки и путешественники. Большую часть окружающих составляют тайраны, но периодически можно заметить и выделяющегося из толпы хельверу или группу нейков.</p><p>Стража достаточно лениво поглядывает на проезжающих, не обращая внимания ни на их расу, ни на груз, который они могут провезти.</p><p>{else}<br>Под покровом ночи движение через ворота пусть и замедляется, но не останавливается. Даже несмотря на то, что Остерак является небольшим городом, торговля с соседями ведется очень активно, и большое количество путешественников и торговцев прибывает в город даже ночью.<br>{endif}</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Войти в город</Text>
+                        <LocationLink>Osterak_NorthEastPath</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_600a8bfa_cfc4_4bea_915c_8333813ea327</TreeViewId>
+                <Guid>Osterak_NorthEastPath</Guid>
+                <Description><p>Вы идете по широкой грунтовой дороге, ведущей к северо-восточным вратам от центральной площади города. {if time==day}Вас окружает плотный поток путешественников, которые, по большей части, движутся в сторону городской площади.{endif}</p><p>По обе стороны от дороги расположены многочисленные деревянные постройки различного назначения. {if time==day}Откуда-то из дворов доносятся громкие детские крики.{else}Даже ночью откуда-то из-за домов слышны крики играющих детей.{endif} Как и в любом тайранском городе, здесь у каждой семьи имеется хотя бы один маленький ребенок, и детские вопли стали чем-то совершенно привычным для местных жителей.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На центральную площадь</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К северо-восточным воротам</Text>
+                        <LocationLink>Osterak_NorthEastGate</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Заглянуть во дворы</Text>
+                        <LocationLink>Osterak_LivingAreas-2</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_fb96c9b0_1ebb_4030_9ae9_2119a69be8e3</TreeViewId>
+                <Guid>Osterak_CentralPlaza</Guid>
+                <Description><p>{if time==day}<br>Вы стоите на центральной площади Остерака, прямо посреди многочисленной толпы снующих мимо вас тайранов. {if race==tairan}Несмотря на то, что каждый из них всегда куда-то бежит и опаздывает, вам привычен подобный образ жизни, и вы чувствуете себя совершенно уверенно в толпе.{else}Каждый из них торопится по своим делам, сбивая с мысли любого приезжего, кто не успел привыкнуть к такой жизни.{endif}<br>{endif}</p><p>Стоя на площади города, никак нельзя подумать, что это достаточно маленький городок. Улицы не пустеют ни днем, ни ночью, и всегда можно слышать отовсюду как и здоровый смех отдыхающих взрослых, так и радостные вопли играющих малышей.</p><p>Вы видите несколько улиц, уходящих в разные стороны от площади. На северо-восток уходит длинная широкая улица, ведущая к северо-восточным воротам, далеко на западе находится здание Совета. Вы также видите крупную каменную таверну на самом краю площади под гордой вывеской "Городской очаг". Кроме того, совсем рядом с вами находится неприметная доска объявлений, на которой виднеется несколько бумаг.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>К северо-восточным воротам</Text>
+                        <LocationLink>Osterak_NorthEastPath</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К зданию Совета</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Зайти в таверну</Text>
+                        <LocationLink>Osterak_Tavern</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Посмотреть на доску объявлений</Text>
+                        <LocationLink>Osterak_InfoBoard</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_8f9820f1_7b26_4989_9e0d_3a03e3ea0be7</TreeViewId>
+                <Guid>Osterak_LivingAreas-1</Guid>
+                <Description><p>Жилые кварталы Остерака выглядят неприметно. Некоторые дома - совсем небольшие - образуют дворы-колодцы, другие же, принадлежащие более богатым семьям, занимают большую территорию и скрываются за высокими заборами.</p><p>Огромные поместья крупнейших династий, что живут в городе, располагаются за его чертой, поскольку они занимают едва ли не такую же площадь, как и целый город.</p><p>{if time==day}<br>По дворам активно бегают дети, за малышами пристально следят ребята постарше или их родители, и в целом город выглядит совершенно мирным.<br>{elseif time==night}<br>Дворы окутаны ночной прохладой. Улицы в этом квартале освещаются лишь тусклыми масляными лампами, да светом редких окон. Изредка из глубин слышится детский крик или плач. Даже по ночам на улицах можно встретить спокойно гуляющих детей. На удивление, уровень преступности в Остераке достаточно низок.<br>{endif}</p><p>{if quest.Osterak_ShadyGuy.available}<br>В стороне от дороги вы замечаете молодого человека, который явно старается не привлекать к себе лишнего внимания. <br>{endif}</p><p>Из жилой зоны есть всего один выход - обратно на главную улицу Остерака. Одна из достаточно широких улиц уходит вглубь, к домам, которые кажутся несколько более богатыми.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На главную улицу</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Вглубь жилых районов</Text>
+                        <LocationLink>Osterak_LivingAreas-4</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_4bb5d319_d50f_4205_b8ee_48daac029e1f</TreeViewId>
+                <Guid>Osterak_LivingAreas-2</Guid>
+                <Description><p>Пробравшись через узкий проход между оградами соседних домов, вы оказываетесь в небольшом дворовом колодце, образованный несколькими деревянными домами и примыкающий к городской стене.</p><p>Из колодца есть всего один выход - обратно на загруженную и шумную дорогу.</p><p>{if race==tairan}<br>Вы видите играющих во дворе детей, и ваше сердце радуется этой прекрасной картине.<br>{endif}</p><p>{if race==helvera&&time==night}<br>Вы поднимаете глаза к небу и видите прекрасную луну, озаряющую своим светом немногочисленных детей во дворе. Вы никогда не понимали любви тайранов к детям, но в лунном свете даже самые капризные малыши становились более тихими и мирными.<br>{endif}</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Выйти на дорогу</Text>
+                        <LocationLink>Osterak_NorthEastPath</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_e76596ae_9fbe_4514_b853_a23944f6d883</TreeViewId>
+                <Guid>Osterak_LivingAreas-3</Guid>
+                <Description><p>Совсем рядом с семейной площадью расположены наиболее богатые дома во всем Остераке. Практически все жилые поместья в этой части города построены из хорошо отесаного камня, а дороги чисты и хорошо освещены.</p><p>Отсюда легко можно выйти на площадь у здания Совета, либо же можно уйти глубже в жилые области.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Выйти на площадь</Text>
+                        <LocationLink>Osterak_CouncilPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Уйти глубже в жилые зоны</Text>
+                        <LocationLink>Osterak_LivingAreas-4</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_f7695eb2_b7c2_477f_bbdf_8b262643139c</TreeViewId>
+                <Guid>Osterak_LivingAreas-4</Guid>
+                <Description><p>Вас окружают дома, которые нельзя назвать ни богатыми, ни бедными. Часть из них построена из деревянных досок, часть - из отесанного булыжника. Освещение на улице внезапно обрывается именно в этой области.</p><p>На восток уходит {if time==night}неосвещенная {endif}дорога, которая, очевидно, ведет к более бедным жилым кварталам. Ведущая же на запад дорога хорошо освещена и ухожена.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>В богатый квартал</Text>
+                        <LocationLink>Osterak_LivingAreas-3</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>В бедный квартал</Text>
+                        <LocationLink>Osterak_LivingAreas-1</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_8cd2cab4_99fc_4f31_b02c_c7251cf1a690</TreeViewId>
+                <Guid>Osterak_MainStreet</Guid>
+                <Description><p>Длинная прямая улица, которая соединяет между собой площадь Совета и центральную площадь, носит невыделяющееся название Главной улицы Остерака. По обе стороны от дороги стоят высокие, по большей части каменные поместья наиболее влиятельных семей в городе. Дорожное покрытие явно уложено совсем недавно: гладкий булыжник все еще тускло блестит при свете селериевых фонарей, а высокие изгороди у поместий создают впечатление нахождения на русле искусственной реки.</p><p>На западе хорошо видно здание Совета семей - сердца любого города тайранов, на востоке же осталась крупная центральная площадь, в любое время суток занятая многочисленной толпой. От центральной улицы ответвляется несколько улиц поменьше, которые ведут к торговым рядам и жилым кварталам.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На центральную площадь</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К зданию Совета</Text>
+                        <LocationLink>Osterak_CouncilPlaza</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>К торговым рядам</Text>
+                        <LocationLink>Osterak_TradingRows</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>В жилые кварталы</Text>
+                        <LocationLink>Osterak_LivingAreas-1</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_babb13a7_d0f9_4b00_ae2c_8fb259a76b9f</TreeViewId>
+                <Guid>Osterak_Tavern</Guid>
+                <Description><p>"Городской очаг" всегда привлекает большое количество посетителей, будучи одним из двух городских трактиров. Управляемый семьей Венейлан, он считается заведением для членов бедных семей или приезжих. Удачное расположение на центральной городской площади способствует постоянному наличию посетителей, и даже по ночам в таверне просто не протолкнуться.</p><p>Большинство столов заняты шумными компаниями, большинство из которых все же является тайранами, но можно заметить и некоторых представителей прочих рас.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Покинуть "Городской очаг"</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_09d39110_4a99_4eff_b9d3_8f76093e53e4</TreeViewId>
+                <Guid>Osterak_InfoBoard</Guid>
+                <Description><p>Столб объявлений на площади всегда увешен многочисленными бумагами различного содержания. Часть из них написаны криво и от руки, но некоторые - определенно были вычерчены тренированной рукой.</p><p>Все объявления написаны на тайранском языке различной степени грамотности.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>Смотреть на объявления</Text>
+                        <LocationLink>Osterak_InfoBoard_Selector</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>Вернуться на площадь</Text>
+                        <LocationLink>Osterak_CentralPlaza</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <Folder>
+                <Name>Folder_fa77c45f_8e8f_4f4b_b6a8_d1a12d5a6329</Name>
+                <Header>Доска объявлений</Header>
+                <LocationSelector>
+                    <TreeViewId>LocationSelector_7ac500ce_983c_4507_b3b7_03078ac7aade</TreeViewId>
+                    <Guid>Osterak_InfoBoard_Selector</Guid>
+                    <Options>
+                        <SelectorOption>
+                            <Link>Osterak_LittleBoy_Encounter</Link>
+                            <Chance>1</Chance>
+                        </SelectorOption>
+                    </Options>
+                </LocationSelector>
+                <Folder>
+                    <Name>Folder_355065ec_d035_4bec_9ead_b7fab8cc15d9</Name>
+                    <Header>Encounter_LittleBoy</Header>
+                    <LocationData>
+                        <TreeViewId>LocationData_a3295fd6_8bb0_403e_af29_479c544f1466</TreeViewId>
+                        <Guid>Osterak_LittleBoy_Encounter</Guid>
+                        <Description><p>Пока вы разглядываете объявления, к вам сзади подходит маленький мальчик, который с интересом начинает вас разглядывать. Он одет очень просто, одежда местами протерта или порвана, но можно заметить достаточно новую и удобную кожаную обувь. Его длинные волосы, достающие ему до поясницы, заплетены в плотную косу и завязаны на конце узлом.</p><p>- Вы, наверное, не {if gender==male}местный{else}местная{endif}? - спрашивает он. Вы поворачиваетесь и смотрите на ребенка, который терпеливо ждет вашего ответа.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Да, а что ты хотел?"</Text>
+                                <LocationLink>Osterak_LittleBoy_PoliteHello</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, я тут уже не в первый раз"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTourPolite</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Оставь меня в покое"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_11717ec8_2bca_4404_88b1_af4576b123f0</TreeViewId>
+                        <Guid>Osterak_LittleBoy_PoliteHello</Guid>
+                        <Description><p>- Ой, а я просто думал, что мог бы предложить вам экскурсию по городу! - довольно отвечает мальчик. - Я очень хорошо знаю Остерак, моя семья живет здесь уже четвертое поколение.</p><p>Он испуганно подпрыгивает на месте и торопливо добавляет:</p><p>- Простите, {if gender==male}господин{else}госпожа{endif}, я забыл представиться. Меня зовут Фирр Норнелан, очень приятно!</p><p>Он приветливо улыбается.</p><p>- Итак, согласитесь ли вы на небольшую прогулку по приметным улицам Остерака?</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Да, конечно же, идем"</Text>
+                                <LocationLink>Osterak_LittleBoy_AgreeForTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Ну, если ты настаиваешь, то пошли"</Text>
+                                <LocationLink>Osterak_LittleBoy_AgreeForTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, спасибо, мне придется отказаться"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, у меня дел полно"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Сначала расскажи о себе"</Text>
+                                <LocationLink>Osterak_LittleBoy_AskAboutHim</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_1129a8ec_7da6_4153_bd75_12c15f6195f7</TreeViewId>
+                        <Guid>Osterak_LittleBoy_AskAboutHim</Guid>
+                        <Description><p>- Ой, простите меня, {if gender==male}господин{else}госпожа{endif}, но я вряд ли смогу рассказать о себе что-то интересное. Как я и говорил, моя семья живет здесь уже четыре поколения, наш дом расположен недалеко от северо-восточных ворот, наверняка вы через них входили в город, но это в той стороне, - мальчик указывает рукой в сторону ворот.</p><p>- Мой отец сейчас работает в таверне господина Венейлан, мама беременна моим пятым братиком. Еще у меня есть три сестренки и один... одна... - он запинается, по его лицу видно, что он пытается что-то вспомнить или придумать. - В общем, не важно! Я сам стараюсь помогать приезжим скорее освоиться в городе, занимаюсь этим каждый день, поэтому очень хорошо знаю город!</p><p>- Так мы идем смотреть Остерак? - он все так же приветливо улыбается, глядя на вас.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Да, конечно же, идем"</Text>
+                                <LocationLink>Osterak_LittleBoy_AgreeForTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Ну, если ты настаиваешь, то пошли"</Text>
+                                <LocationLink>Osterak_LittleBoy_AgreeForTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, спасибо, мне придется отказаться"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, у меня дел полно"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Подожди-подожди, что там насчет твоего брата-сестры?"</Text>
+                                <LocationLink>Osterak_LittleBoy_AskMoreAboutFamily</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_e2ff42b1_8d1c_4680_a015_30299455ac11</TreeViewId>
+                        <Guid>Osterak_LittleBoy_AskMoreAboutFamily</Guid>
+                        <Description><p>- Ну... - Фирр снова запинается и смотрит в пол. - Вы точно хотите это знать?</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Да, мне очень интересно"</Text>
+                                <LocationLink>Osterak_LittleBoy_ConfirmFamilyQuestion</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"А почему, думаешь, я спрашиваю?"</Text>
+                                <LocationLink>Osterak_LittleBoy_ConfirmFamilyQuestion</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"На самом деле, не очень"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyFamilyQuestion</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_7271d59d_e21f_4d65_a891_900d900670b4</TreeViewId>
+                        <Guid>Osterak_LittleBoy_ConfirmFamilyQuestion</Guid>
+                        <Description><p>- Ну, просто... мои родители...</p><p>Мальчик нервно сглатывает.</p><p>- У нас в доме живет... дрекк. Простите, {if gender==male}господин{else}госпожа{endif}.</p><p>Фирр разворачивается и быстро убегает в сторону дома.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Фирр, стой!"</Text>
+                                <LocationLink>Osterak_LittleBoy_CallForHim</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>Пожать плечами и вернуться к доске объявлений</Text>
+                                <LocationLink>Osterak_InfoBoard</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_cb288858_4036_492a_80f5_d0676fb23d97</TreeViewId>
+                        <Guid>Osterak_LittleBoy_CallForHim</Guid>
+                        <Description><p>Вы пытаетесь окликнуть мальчика, но он бежит прочь от вас сквозь толпу, не разбирая дороги.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>Вернуться к доске объявлений</Text>
+                                <LocationLink>Osterak_InfoBoard</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_7aeddd96_2f6a_4968_ad84_d581a864a574</TreeViewId>
+                        <Guid>Osterak_LittleBoy_DenyFamilyQuestion</Guid>
+                        <Description><p>Мальчик облегченно выдыхает.</p><p>- Ну и замечательно. Так что, мы идем смотреть город?</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Да, конечно же, идем"</Text>
+                                <LocationLink>Osterak_LittleBoy_AgreeForTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Ну, если ты настаиваешь, то пошли"</Text>
+                                <LocationLink>Osterak_LittleBoy_AgreeForTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, спасибо, мне придется отказаться"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Нет, у меня дел полно"</Text>
+                                <LocationLink>Osterak_LittleBoy_DenyTour</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_6a0fd42a_e15b_4738_b02c_79a68c0ffba4</TreeViewId>
+                        <Guid>Osterak_LittleBoy_DenyTour</Guid>
+                        <Description><p>{if race==tairan}<br>- Ну, как хочешь, - мальчик резко изменяется в лице и удаляется, сливаясь с толпой. Найти его там не представляется возможным.<br>{elseif race==helvera}<br>- Ай, да ну и разбирайся {if gender==male}сам{else}сама{endif}. К черту вас всех, приезжих, - бросает он едкий комментарий и удаляется, сливаясь с толпой. Найти его там не представляется возможным.<br>{endif}</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>Вернуться к доске объявлений</Text>
+                                <LocationLink>Osterak_InfoBoard</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_086dae00_1664_4a53_b0f6_f6a5fff29c3e</TreeViewId>
+                        <Guid>Osterak_LittleBoy_DenyTourPolite</Guid>
+                        <Description><p>- Простите, {if gender==male}господин{else}госпожа{endif}, не буду более отнимать ваше время, - мальчик извиняется и удаляется, сливаясь с толпой. Вы очень быстро теряете его из виду.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>Вернуться к доске объявлений</Text>
+                                <LocationLink>Osterak_InfoBoard</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_2bfda9c4_146e_4385_9361_4dcad3fc4b03</TreeViewId>
+                        <Guid>Osterak_LittleBoy_AgreeForTour</Guid>
+                        <Description><p>Мальчик подпрыгивает на месте от радости{if gender==female} и хватает вас за руку{else} и зовет вас за собой{endif}.</p><p>- Отлично-отлично-отлично! Идем скорее, нам нужно очень много успеть осмотреть!</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>Последовать за Фирром</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-1</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_206efbc6_b6d5_4b96_a53e_6a6a6e5cd04c</TreeViewId>
+                        <Guid>Osterak_LittleBoy_Tour-1</Guid>
+                        <Description><p>Фирр отводит вас в сторону, совсем недалеко, и указывает рукой на деревянное здание таверны, стоящее на окраине центральной площади.</p><p>- Первая остановка - таверна "Городской очаг", что управляется господином Венейлан. Взрослые часто заходят туда, чтобы выпить и пообщаться, изредка еще и покушать, но, - его голос стал заговорщицким. - Скажу по-секрету, что еда здесь отвратительная, советую посещать "Белого лебедя", там гораздо вкуснее, пусть и дороже.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Идем дальше"</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-2</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Можешь рассказать еще что-нибудь интересное?"</Text>
+                                <LocationLink>Osterak_LittleBoy_AskAboutTavern</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_aaf9768d_3243_4f06_9947_faaa2ff6136c</TreeViewId>
+                        <Guid>Osterak_LittleBoy_AskAboutTavern</Guid>
+                        <Description><p>- Да, конечно!</p><p>Мальчик на несколько секунд задумывается, а затем выдает несколько фактов:</p><p>- В подвале под таверной постоянно заводятся крысы, и господин Венейлан часто просит у приезжих помощи с их истреблением. Сейчас, правда, он нашел какой-то новый способ избавления от вредителей, и я уже давно не слышал, чтобы кто-то помогал ему с истреблением.</p><p>- "Городской очаг" считается дешевым трактиром, для более бедных семей. Он и расположен почти что среди трущоб{if race==helvera}, - Фирр осматривает вас с ног до головы. Для нас, тайранов, маленькие деревянные дома считаются чем-то унизительным. Когда пойдем в западную область, там можно будет увидеть гораздо более богатые дома{endif}.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Спасибо, идем дальше"</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-2</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Понятно, пошли"</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-2</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_daa3e07d_5e8d_4bb6_b2bb_4a37b7fef604</TreeViewId>
+                        <Guid>Osterak_LittleBoy_Tour-2</Guid>
+                        <Description><p>Мальчик кивает и ведет вас на запад, в сторону от основной толпы. Он останавливается посреди длинной широкой улицы и, раскинув руки в стороны, рассказывает, сопровождая свои объяснения широкими жестами, указывая направление к той или иной достопримечательности:</p><p>- Это - Главная улица Остерака. Мы пришли оттуда, там находится центральная площадь, где всегда творится самое жуткое столпотворение. Честно, до сих пор не могу понять, почему именно там. На западе - это дальше по улице - находится здание Совета семей, а так же Семейная площадь. Там решаются все самые важные вопросы, которые касаются города.</p><p>Фирр на секунду задумывается, а затем продолжает:</p><p>- Вон там, на севере, расположены торговые ряды. Наверное, это очевидно, если заметить, сколько туда идет нагруженных повозок. Кстати, там скоро открывается крытый рынок семьи Кименит, если вас интересует торговля, обязательно загляните туда, {if gender==male}господин{else}госпожа{endif}.</p><p>- Если пройти вон туда, между домами, то можно попасть в жилые районы. Здесь все еще расположены не самые богатые дома, но во-он там уже виднеются постройки из булыжника и белого кирпича, там живут более богатые семьи.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Идем дальше"</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-3</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_0f237bb9_e4d2_4ce4_ac0d_efec79631b17</TreeViewId>
+                        <Guid>Osterak_LittleBoy_Tour-3</Guid>
+                        <Description><p>Фирр продолжает двигаться на запад, а вы идете за ним следом.</p><p>- Итак, вот это, - мальчик указывает на крупное здание из белого кирпича, украшенное многочисленными декоративными элементами. - Здание Совета семей. Как я и говорил, отсюда производится управление всем городом. На данный момент, в Совете заседают главы одиннадцати самых влиятельных семей Остерака, в том числе, кстати, уже упомянутые мной Кименит и Венейлан.</p><p>- В той стороне расположен "Белый лебедь", о котором я уже тоже говорил, очень неплохое место для того, чтобы провести ночь или поужинать. И там достаточно тихо, в отличие от "Очага", куда заваливается большинство приезжих.</p><p>- И в общем-то, вот и весь наш небольшой городок, - мальчик еще раз осмотрелся вокруг себя, словно проверяя, ничего ли не упустил. - Да, у нас нет особенных достопримечательностей здесь, но как есть.</p><p>Фирр смотрит на вас, словно ожидая чего-то.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Хорошо, спасибо"</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-4</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Понятно, чего ждешь?"</Text>
+                                <LocationLink>Osterak_LittleBoy_Tour-4</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_61373f09_69d3_416b_aba4_f3988aace656</TreeViewId>
+                        <Guid>Osterak_LittleBoy_Tour-4</Guid>
+                        <Description><p>Мальчик переминается с ноги на ногу.</p><p>- {if gender==male}Господин{else}Госпожа{endif}, я думал, что смогу получить награду за свою помощь. Например, одну серебряную монету.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>"Прости, у меня нет с собой денег"</Text>
+                                <LocationLink>Osterak_LittleBoy_TourEndNoMoney</LocationLink>
+                            </LocationDecision>
+                            <LocationDecision>
+                                <Text>"Брысь отсюда"</Text>
+                                <LocationLink>Osterak_LittleBoy_TourEndRude</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_4c00e0f2_8bd6_4cfa_a081_5ce57e918870</TreeViewId>
+                        <Guid>Osterak_LittleBoy_TourEndNoMoney</Guid>
+                        <Description><p>Улыбка быстро сползает с лица Фирра:</p><p>- Серьезно? И у тебя тоже? Ну и катись тогда сам{if gender==female}а{endif} знаешь куда...</p><p>До того, как вы успеваете что-то сказать, мальчик скрывается в переулке за ближайшим домом.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>Продолжить</Text>
+                                <LocationLink>Osterak_CouncilPlaza</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                    <LocationData>
+                        <TreeViewId>LocationData_55ed6300_157c_4717_9cc3_96741054ec6e</TreeViewId>
+                        <Guid>Osterak_LittleBoy_TourEndRude</Guid>
+                        <Description><p>Улыбка быстро сползает с лица Фирра.</p><p>- А, отлично, - говорит он нахальным тоном и добавляет несколько грязных ругательств, одновременно убегая в темный переулок за ближайшим домом. Бежать за ним нет смысла, он все равно знает город куда лучше вас.</p></Description>
+                        <Decisions>
+                            <LocationDecision>
+                                <Text>Продолжить</Text>
+                                <LocationLink>Osterak_CouncilPlaza</LocationLink>
+                            </LocationDecision>
+                        </Decisions>
+                    </LocationData>
+                </Folder>
+                <Folder>
+                    <Name>Folder_4b50a275_2a86_4058_a074_bd9c9b744d5e</Name>
+                    <Header>Encounter_RunningRats</Header>
+                </Folder>
+            </Folder>
+            <LocationData>
+                <TreeViewId>LocationData_f4d1a3b1_f53c_479a_9b76_49001acee39e</TreeViewId>
+                <Guid>Osterak_CouncilPlaza</Guid>
+                <Description><p>Вторая по величине площадь Остерака зовется семейной, поскольку на ней расположен Совет семей, центральный орган управления городом, куда входят представители крупнейших семей области.</p><p>Само же здание совета представляет собой массивное здание из белого кирпича - редкого и дорогого для тайранов строительного материала - с многочисленными колоннами и высоким шпилем. В этом здании проводятся слушания по судебным делам, если те касаются всего города, а также обсуждаются вопросы, влияющие на общественную жизнь.</p><p>Как и всегда, здание Совета закрыто для посетителей, не имеющих особого дела.</p><p>В этой части города приезжих становится резко меньше, и в целом столпотворение ощущается далеко не так сильно. {if time==night}Сейчас же площадь и вовсе выглядит практически заброшенной, если не считать редких проходящих по своим делам тайранов.{endif}</p><p>На восток уходит главная улица, ведущая к центральной площади, а узкие улочки между домами приведут во дворы.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>К центральной площади</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                    <LocationDecision>
+                        <Text>В жилые области</Text>
+                        <LocationLink>Osterak_LivingAreas-3</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+            <LocationData>
+                <TreeViewId>LocationData_d31ff706_661f_4605_9ae8_7df2cde881de</TreeViewId>
+                <Guid>Osterak_TradingRows</Guid>
+                <Description><p>Торговые ряды Остерака напоминают его центральную площадь, с той лишь разницей, что здесь все стоят на месте и пытаются продать проходящим и проезжающим мимо свои товары.</p><p>Очевидно, что рынок образовался стихийно, и никто за ним не следит. Многочисленные палатки, витрины и столы завалены всевозможными товарами разной степени качества, цены на большинство из которых безбожно завышены. Город, являясь торговым центром в своем регионе, привлекает большое количество приезжих, которые готовы отдать свои деньги за, казалось бы, бесполезную вещь. Впрочем, многие из них понимают, что эту вещь всегда можно перепродать на родине за тройную цену.</p><p>В северо-западной части торгового ряда виднеется здание крытого рынка, открытие которого назначено уже на следующую луну. В южной же части между домами виднеется проход на главную улицу Остерака.</p></Description>
+                <Decisions>
+                    <LocationDecision>
+                        <Text>На главную улицу</Text>
+                        <LocationLink>Osterak_MainStreet</LocationLink>
+                    </LocationDecision>
+                </Decisions>
+            </LocationData>
+        </Folder>
+    </Folder>
+</Folder>
+<Folder>
+    <Name>Folder_4ef9175d_792b_49da_9b10_7975fb6d57d4</Name>
+    <Header>Прочее</Header>
+    <LocationData>
+        <TreeViewId>LocationData_8515afcb_dd6c_4fa3_ae0e_a9a909f5e1aa</TreeViewId>
+        <Guid>Void</Guid>
+        <Description><p>Пустота... холодна.</p></Description>
+        <Decisions>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationData_fc19d165_8573_4b29_a522_db95a8fbeaef</TreeViewId>
+        <Guid>Development_Entry</Guid>
+        <Description><p>Точка входа для области в разработке.</p></Description>
+        <Decisions>
+            <LocationDecision>
+                <Text>Продолжить</Text>
+                <LocationLink>Osterak_NorthEastGate</LocationLink>
+            </LocationDecision>
+        </Decisions>
+    </LocationData>
+    <LocationData>
+        <TreeViewId>LocationData_ece53c23_455c_4856_9242_71c5c7a0f27d</TreeViewId>
+        <Guid>Error_SessionExpired</Guid>
+        <Description><p>Время сессии истекло или сессия была переназначена. Попробуйте обновить страницу и войти снова.</p></Description>
+        <Decisions>
+        </Decisions>
+    </LocationData>
+</Folder>

@@ -1,62 +1,53 @@
 
-var CurrentLocation = "None";
-var CurrentLocationDescription = "";
-var CurrentLocationDecisions;
+var sessionKey = undefined;
+var currentLocation;
+var currentLocationDescription = "";
+var currentLocationDecisions;
+var currentPlayerName;
 
-function SendDataRequest(index)
+var characterRace;
+var characterGender;
+
+var worldTime;
+
+// Page init
+function Init()
 {
-	var request = new XMLHttpRequest();
-	request.open("RPG", "", true);
-	request.onload = AsyncRequestOnload;
-	request.send("location=" + CurrentLocation + "&decision=" + index);
+	document.getElementById('infoDiv').style.visibility = 'hidden';
 }
 
-function AsyncRequestOnload()
+// New game
+function StartGame(action)
 {
-	var response = this.responseText.split("%%");
-	CurrentLocation = response[0].split("=")[1];
-	CurrentLocationDescription = response[1].split("=")[1];
-	WriteLocationDescription();
-	
-	CurrentLocationDecisions = new Array();
-	for (i = 0; i < response[2].split("=")[1]; i++)
+	currentPlayerName = document.getElementById('playerNameInput').value;
+	// Character race
+	var characterRaceSelect = document.getElementById('characterRace');
+	characterRace = characterRaceSelect.options[characterRaceSelect.selectedIndex].value;
+	// Character gender
+	var genderRadio = document.getElementsByName('characterGender');
+	if (genderRadio[0].checked)
+		characterGender = "male";
+	else
+		characterGender = "female";
+
+	// Start
+	if (action == "New")
 	{
-		CurrentLocationDecisions.push((i + 1) + ". " + response[i + 3]);
+		var select = document.getElementById("entryPointSelect");
+		GameStartRequest(currentPlayerName, select.options[select.selectedIndex].value, characterRace, characterGender);
 	}
-	CreateGameButtons();
-}
-
-function WriteLocationDescription()
-{
-	var output = "";
-	output += "<div id='mainTextDiv'>";
-	var data = CurrentLocationDescription;
-	var paragraphs = data.split("<br>");
-	for (i = 0; i < paragraphs.length; i++)
+	else if (action == "Resume")
 	{
-		output += "<p class='mainTextP'>" + paragraphs[i] + "</p>";
+		GameResumeRequest(currentPlayerName);
 	}
-	output += "</div>";
-	document.getElementById('areaDescriptionDiv').innerHTML = output;
+	document.getElementById('loginDiv').innerHTML = null;
+	document.getElementById('infoDiv').style.visibility = 'visible';
 }
 
-function CreateGameButtons()
-{
-	var output = "";
-	for (i = 0; i < 6; i++)
-	{
-		var buttonData = CurrentLocationDecisions[i];
-		if (buttonData != null)
-		{
-			output += "<button class='gameAnswerButton' onclick='OnButtonClick(" + i + ")'>" + buttonData + "</button>";
-		}
-	}
-	document.getElementById('gameButtonsDiv').innerHTML = output;
-}
-
+// Game button press event handler
 function OnButtonClick(index)
 {
-	SendDataRequest(index);
+	MovementUpdateRequest(index);
 }
 
 // Prevent context menu from appearing
